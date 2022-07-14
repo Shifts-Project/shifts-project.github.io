@@ -1,0 +1,26 @@
+{% assign fields = site.data.page_dataset.fields.hero %}
+<div class="dataset-hero">
+  <div class="dataset-hero__container container">
+    <div class="cols">
+      <div class="cols__col cols__col_l">
+        <h1 class="dataset-hero__heading heading-h1">
+          {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+        </h1>
+        <div class="dataset-hero__text">
+          {{ fields.text | markdownify }}
+        </div>
+      </div>
+      <div class="col cols__col cols__col_r">
+        {% assign fields = site.data.page_dataset.fields.content.list %}
+        {% include side-nav.html %}
+      </div>
+    </div>
+  </div>
+  <div class="dataset-hero__decor-wrap decor-wrap">
+    <img
+      class="dataset-hero__decor-bg dataset-hero__decor-bg_bg-18 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-18.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

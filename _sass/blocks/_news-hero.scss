@@ -1,0 +1,21 @@
+.news-hero {
+  position: relative;
+}
+
+.news-hero__container {
+  z-index: 1;
+}
+
+/* Decor */
+
+.news-hero__decor-bg_bg-25 {
+  top: -665px;
+  left: 75%;
+  margin-left: -280px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -460px;
+    width: 500px;
+    margin-left: -175px;
+  }
+}

@@ -1,0 +1,46 @@
+{% assign fields = site.data.page_news.fields.news %}
+<div class="news-list">
+  <div class="news-list__container container">
+    <div class="challenges-list__content-col content-col content-col_left">
+      <ul class="news-list__list">
+        {% for post in site.posts %}
+          <li class="news-list__item">
+            <h3 class="news-list__title heading-h3">
+              <a
+                class="news-list__link"
+                href="{{ site.baseurl }}{{ post.url }}"
+              >
+                {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
+              </a>
+            </h3>
+            <div class="news-list__date">
+              {{ fields.published | markdownify | remove: '<p>' | remove: '</p>' }}
+              {{ post.date | date_to_long_string }}
+            </div>
+            <div class="news-list__excerpt">
+              {{ post.excerpt | markdownify }}
+            </div>
+            <div class="news-list__more-wrap">
+              <a
+                href="{{ site.baseurl }}{{ post.url }}"
+                class="news-list__more"
+              >
+                {{ fields.more }}
+                <svg viewBox="0 0 18 18" class="news-list__more-icon">
+                  <use xlink:href="#icon-corner-right"></use>
+                </svg>
+              </a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="news-list__decor-wrap decor-wrap">
+    <img
+      class="news-list__decor-bg news-list__decor-bg_bg-26 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-26.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

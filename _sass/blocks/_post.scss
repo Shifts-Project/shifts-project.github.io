@@ -1,0 +1,80 @@
+.post {
+  position: relative;
+  padding: 0 0 138px;
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 0 0 80px;
+  }
+}
+
+.post__container {
+  z-index: 1;
+}
+
+.post__image {
+  display: block;
+  max-width: 100%;
+  margin: 44px 0 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 32px 0 0;
+  }
+}
+
+.post__date {
+  margin: 32px 0 40px;
+  color: $color-gray-light;
+  font-size: 14px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 32px 0 18px;
+    font-size: 12px;
+  }
+}
+
+.post__text {
+  color: $color-gray-light;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* Decor */
+
+.post__decor-bg_bg-27 {
+  top: -645px;
+  left: 75%;
+  margin-left: -135px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -550px;
+    width: 500px;
+    margin-left: -145px;
+  }
+}
+
+.post__decor-bg_bg-28 {
+  top: -10px;
+  left: 25%;
+  margin-left: -750px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -30px;
+    width: 500px;
+    margin-left: -460px;
+  }
+}
+
+.post__decor-bg_bg-29 {
+  display: none; // Hidden to be compatible with shorter news
+  bottom: -270px;
+  left: 75%;
+  margin-left: -260px;
+
+  @include breakpoint-lo($small-viewport) {
+    bottom: -190px;
+    width: 500px;
+    margin-left: -160px;
+  }
+}

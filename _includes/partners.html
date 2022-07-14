@@ -1,0 +1,49 @@
+<div class="partners">
+  <div class="partners__container container">
+    <div class="partners__content-col">
+      <h2 class="partners__heading heading-h2 heading-h2_no-border">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h2>
+      <ul class="partners__list">
+        {% for item in fields.list %}
+          <li class="partners__item partners__item_{{ item.slug }}">
+            <a
+              class="partners__link"
+              href="{{ item.url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="{{ item.title }}"
+            >
+              {% if item.svg %}
+                <img
+                  class="partners__image"
+                  src="{{'/assets/images/partners/' | append: item.slug | append: '.svg' | relative_url}}"
+                  alt="{{ item.title }}"
+                />
+              {% else %}
+                <img
+                  class="partners__image"
+                  src="{{'/assets/images/partners/' | append: item.slug | append: '.png' | relative_url}}"
+                  srcSet="
+                      {{'/assets/images/partners/' | append: item.slug | append: '.png' | relative_url}},
+                      {{'/assets/images/partners/' | append: item.slug | append: '@2x.png' | relative_url}} 2x
+                    "
+                  alt="{{ item.title }}"
+                />
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% if fields.enableDecorBg %}
+    <div class="partners__decor-wrap decor-wrap">
+      <img
+        class="partners__decor-bg partners__decor-bg_bg-24 decor-wrap_bg"
+        src="{{'/assets/images/decor/decor-bg-24.svg' | relative_url}}"
+        alt=""
+      />
+    </div>
+  {% endif %}
+</div>

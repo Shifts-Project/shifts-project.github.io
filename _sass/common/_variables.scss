@@ -1,0 +1,31 @@
+/* Fonts */
+$font-family-text: Inter, 'Open Sans', 'Helvetica Neue', arial, sans-serif;
+$font-family-heading: Inter, 'Open Sans', 'Helvetica Neue', arial, sans-serif;
+$font-family-code: RobotoMono, monospace;
+
+/* Colors */
+$color-accent: #c478ff; //#b63a69;
+$color-bg-body: #160620;
+$color-text: #fff;
+$color-text-accent: $color-accent;
+$color-text-accent-light: #d398ff; // #d94c81;
+$color-text-dark: $color-bg-body;
+$color-gray: #828282;
+//$color-gray-2-opacity-50: rgba(22, 6, 32, 0.5);
+$color-gray-3: #b4afb8;
+$color-gray-light: #dcdade;
+$color-gray-light-2: #f1f1f1;
+$color-link: $color-text-accent;
+$color-link-hover: $color-text-accent-light;
+$color-code-bg: #332d36;
+
+/* Sizes */
+$min-body-width: 320px;
+$width-container: 1260px;
+$padding-side: 60px;
+$padding-side-md: 30px;
+$padding-side-sm: 16px;
+$height-button: 34px;
+$height-button-sm: 44px;
+$width-content-col: 800px;
+$width-content-col-l: 860px;

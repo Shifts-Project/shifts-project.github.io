@@ -1,0 +1,41 @@
+{
+  "navigation": {
+    "title": "Navigation",
+    "menu": [
+      {
+        "title": "Challenges",
+        "url": "/challenges",
+        "page": "challenges",
+        "external": false
+      },
+      {
+        "title": "Dataset &amp;&nbsp;Benchmarks",
+        "url": "/dataset",
+        "page": "dataset",
+        "external": false
+      },
+      {
+        "title": "Papers",
+        "url": "/papers",
+        "page": "papers",
+        "external": false
+      },
+      {
+        "title": "Team",
+        "url": "/team",
+        "page": "team",
+        "external": false
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/Shifts-Project/shifts",
+        "page": "",
+        "external": true
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "email": "info@shiftsproject.io"
+  }
+}

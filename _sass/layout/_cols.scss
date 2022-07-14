@@ -1,0 +1,32 @@
+.cols {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include breakpoint-lo($smaller-viewport) {
+    flex-wrap: wrap;
+  }
+}
+
+.col {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.cols__col_l {
+  width: 100%;
+  max-width: $width-content-col-l;
+}
+
+.cols__col_r {
+  box-sizing: border-box;
+  width: 290px;
+  padding: 0 0 0 40px;
+
+  @include breakpoint-lo($smaller-viewport) {
+    width: 100%;
+    max-width: 290px;
+    padding: 0;
+  }
+}

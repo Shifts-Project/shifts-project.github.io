@@ -1,0 +1,41 @@
+{
+  "fields": {
+    "breadcrumbs": {
+      "home": {
+        "title": "Shifts",
+        "url": "/"
+      },
+      "list": [
+        {
+          "title": "Papers",
+          "url": "/papers"
+        }
+      ]
+    },
+    "hero": {
+      "heading": "Papers"
+    },
+    "papers": {
+      "list": [
+        {
+          "title": "Shifts: A&nbsp;Dataset of&nbsp;Real Distributional Shift Across Multiple Large-Scale Tasks",
+          "img": "",
+          "video": "papers/papers-hero-01.mp4?v=1",
+          "videoPoster": "papers/papers-hero-01.png",
+          "text": "There has been significant research done on&nbsp;developing methods for improving robustness to&nbsp;distributional shift and uncertainty estimation. In&nbsp;contrast, only limited work has examined developing standard datasets and benchmarks for assessing these approaches. Additionally, most work on&nbsp;uncertainty estimation and robustness has developed new techniques based on&nbsp;small-scale regression or&nbsp;image classification tasks. However, many tasks of&nbsp;practical interest have different modalities, such as&nbsp;tabular data, audio, text, or&nbsp;sensor data, which offer significant challenges involving regression and discrete or&nbsp;continuous structured prediction. Thus, given the current state of&nbsp;the field, a&nbsp;standardized large-scale dataset of&nbsp;tasks across a&nbsp;range of&nbsp;modalities affected by&nbsp;distributional shifts is&nbsp;necessary. This will enable researchers to&nbsp;meaningfully evaluate the plethora of&nbsp;recently developed uncertainty quantification methods, as&nbsp;well as&nbsp;assessment criteria and state-of-the-art baselines. In&nbsp;this work, we&nbsp;propose the Shifts Dataset for the evaluation of&nbsp;uncertainty estimates and robustness to&nbsp;distributional shift. The dataset, which has been collected from industrial sources and services, is&nbsp;composed of&nbsp;three tasks, with each corresponding to&nbsp;a&nbsp;particular data modality: tabular weather prediction, machine translation, and self-driving car (SDC) vehicle motion prediction. All of&nbsp;these data modalities and tasks are affected by&nbsp;real, &ldquo;in-the-wild&rdquo; distributional shifts and pose interesting challenges with respect to&nbsp;uncertainty estimation. In&nbsp;this work we&nbsp;provide a&nbsp;description of&nbsp;the dataset and baseline results for all tasks.",
+          "more": "[https://arxiv.org/abs/2107.07455](https://arxiv.org/abs/2107.07455)",
+          "url": "https://arxiv.org/abs/2107.07455"
+        },
+        {
+          "title": "Shifts&nbsp;2.0: Extending The Dataset of&nbsp;Real Distributional Shifts",
+          "img": "",
+          "video": "papers/papers-hero-02.mp4?v=1",
+          "videoPoster": "papers/papers-hero-02.png",
+          "text": "Distributional shift, or&nbsp;the mismatch between training and deployment data, is&nbsp;a&nbsp;significant obstacle to&nbsp;the usage of&nbsp;machine learning in&nbsp;high-stakes industrial applications, such as&nbsp;autonomous driving and medicine. This creates a&nbsp;need to&nbsp;be&nbsp;able to&nbsp;assess how robustly&nbsp;ML models generalize as&nbsp;well as&nbsp;the quality of&nbsp;their uncertainty estimates. Standard ML&nbsp;baseline datasets do&nbsp;not allow these properties to&nbsp;be&nbsp;assessed, as&nbsp;the training, validation and test data are often identically distributed. Recently, a&nbsp;range of&nbsp;dedicated benchmarks have appeared, featuring both distributionally matched and shifted data. Among these benchmarks, the Shifts dataset stands out in&nbsp;terms of&nbsp;the diversity of&nbsp;tasks as&nbsp;well as&nbsp;the data modalities it&nbsp;features. While most of&nbsp;the benchmarks are heavily dominated by&nbsp;2D&nbsp;image classification tasks, Shifts contains tabular weather forecasting, machine translation, and vehicle motion prediction tasks. This enables the robustness properties of&nbsp;models to&nbsp;be&nbsp;assessed on&nbsp;a&nbsp;diverse set of&nbsp;industrial-scale tasks and either universal or&nbsp;directly applicable task-specific conclusions to&nbsp;be&nbsp;reached. In&nbsp;this paper, we&nbsp;extend the Shifts Dataset with two datasets sourced from industrial, high-risk applications of&nbsp;high societal importance. Specifically, we&nbsp;consider the tasks of&nbsp;segmentation of&nbsp;white matter Multiple Sclerosis lesions in&nbsp;3D&nbsp;magnetic resonance brain images and the estimation of&nbsp;power consumption in&nbsp;marine cargo vessels. Both tasks feature ubiquitous distributional shifts and a&nbsp;strict safety requirement due to&nbsp;the high cost of&nbsp;errors. These new datasets will allow researchers to&nbsp;further explore robust generalization and uncertainty estimation in&nbsp;new situations. In&nbsp;this work, we&nbsp;provide a&nbsp;description of&nbsp;the dataset and baseline results for both tasks.",
+          "more": "[https://arxiv.org/abs/2206.15407](https://arxiv.org/abs/2206.15407)",
+          "url": "https://arxiv.org/abs/2206.15407"
+        }
+      ]
+    }
+  }
+}

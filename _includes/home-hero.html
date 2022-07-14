@@ -1,0 +1,103 @@
+{% assign fields = site.data.page_index.fields.hero %}
+<div class="home-hero">
+  <div class="home-hero__container container">
+    <div class="home-hero__content">
+      <div class="home-hero__top">
+        <h1 class="home-hero__heading" id="hero-heading">
+          {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+        </h1>
+        <div class="home-hero__intro">
+          {{ fields.intro | markdownify }}
+        </div>
+        {% if fields.github.enableOnMobile %}
+          <div class="home-hero__github">
+            <a
+              href="{{ fields.github.url }}"
+              class="home-hero__github-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ fields.github.text | markdownify | remove: '<p>' | remove: '</p>' }}
+              <svg viewBox="0 0 38 38" class="home-hero__github-icon">
+                <use xlink:href="#icon-cta-external"></use>
+              </svg>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="home-hero__description">
+        {{ fields.description | markdownify }}
+      </div>
+      {% if fields.cta.enable %}
+        <div class="home-hero__cta">
+          <a
+            href="{{ fields.cta.url }}"
+            class="home-hero__cta-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ fields.cta.text | markdownify | remove: '<p>' | remove: '</p>' }}
+            <svg viewBox="0 0 21 21" class="home-hero__cta-icon">
+              <use xlink:href="#icon-cta-external-2"></use>
+            </svg>
+          </a>
+        </div>
+      {% endif %}
+      {% if fields.providers.enable %}
+        <div class="home-hero__providers">
+          <div class="home-hero__providers-text">
+            {{ fields.providers.text | markdownify }}
+          </div>
+          <ul class="home-hero__providers-list">
+            {% for item in fields.providers.list %}
+              <li class="home-hero__providers-item home-hero__providers-item_{{ item.slug }}">
+                <a
+                  class="home-hero__providers-link"
+                  href="{{ item.url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="{{ item.title }}"
+                >
+                  {% if item.svg %}
+                  <img
+                    class="home-hero__providers-image"
+                    src="{{'/assets/images/partners/' | append: item.slug | append: '.svg' | relative_url}}"
+                    alt="{{ item.title }}"
+                  />
+                  {% else %}
+                  <img
+                    class="home-hero__providers-image"
+                    src="{{'/assets/images/partners/' | append: item.slug | append: '.png' | relative_url}}"
+                    srcSet="
+                        {{'/assets/images/partners/' | append: item.slug | append: '.png' | relative_url}},
+                        {{'/assets/images/partners/' | append: item.slug | append: '@2x.png' | relative_url}} 2x
+                      "
+                    alt="{{ item.title }}"
+                  />
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="home-hero__decor-wrap decor-wrap">
+    <img
+      class="home-hero__decor-bg home-hero__decor-bg_bg-01 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-01.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="home-hero__decor-bg home-hero__decor-bg_bg-02 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-02.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="home-hero__decor-bg home-hero__decor-bg_bg-03 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-03.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

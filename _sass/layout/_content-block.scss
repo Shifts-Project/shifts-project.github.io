@@ -1,0 +1,11 @@
+.content-block {
+  margin: 35px 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 30px 0;
+  }
+}
+
+.content-block__text {
+  color: $color-gray-light;
+}

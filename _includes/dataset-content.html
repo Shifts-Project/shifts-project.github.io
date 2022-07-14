@@ -1,0 +1,106 @@
+{% assign fields = site.data.page_dataset.fields.content %}
+<div class="dataset-content">
+  {% for section in fields.list %}
+    <div class="dataset-content__section">
+      <div class="dataset-content__anchor anchor anchor_offset" id="{{ section.anchor }}"></div>
+      <div class="dataset-content__container container">
+        <h2 class="dataset-content__heading heading-h2">
+          {{ section.title | markdownify | remove: '<p>' | remove: '</p>' }}
+        </h2>
+        <div class="dataset-content__content-col content-col">
+          {% if section.img and section.img != '' %}
+            <div class="dataset-content__hero">
+              <img
+                class="dataset-content__image"
+                src="{{'/assets/images/' | append: section.img | relative_url}}"
+                alt=""
+              />
+            </div>
+          {% endif %}
+          {% if section.video and section.video != '' %}
+            <div class="dataset-content__hero">
+              <div class="dataset-content__video-wrap">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  webkit-playsinline="webkit-playsinline"
+                  preload="auto"
+                  {% if item.videoPoster and item.videoPoster != '' %}
+                  poster="{{'/assets/images/' | append: section.videoPoster | relative_url}}"
+                  {% endif %}
+                  class="dataset-content__video"
+                >
+                  <source
+                    src="{{'/assets/images/' | append: section.video | relative_url}}"
+                  />
+                </video>
+              </div>
+            </div>
+          {% endif %}
+          {% for item in section.blocks %}
+            <div class="dataset-content__block content-block">
+              <h3 class="dataset-content__title content-block__title heading-h3">
+                {{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}
+              </h3>
+              <div class="dataset-content__text content-block__text">
+                {{ item.text | markdownify }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="dataset-content__citation">
+          <h3 class="dataset-content__title heading-h3">
+            {{ section.citation.title | markdownify | remove: '<p>' | remove: '</p>' }}
+          </h3>
+          <div class="dataset-content__code">
+            {% highlight plaintext %}{{ section.citation.code | markdownify | remove: '<p>' | remove: '</p>' }}{% endhighlight %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  <div class="dataset-content__decor-wrap decor-wrap">
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-10 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-10.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-11 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-11.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-12 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-12.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-13 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-13.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-14 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-14.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-15 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-15.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-16 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-16.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="dataset-content__decor-bg dataset-content__decor-bg_bg-17 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-17.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

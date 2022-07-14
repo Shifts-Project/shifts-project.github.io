@@ -1,0 +1,15 @@
+{% assign fields = site.data.page_team.fields.hero %}
+<div class="team-hero">
+  <div class="team-hero__container container">
+    <h1 class="team-hero__heading heading-h1">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h1>
+  </div>
+  <div class="team-hero__decor-wrap decor-wrap">
+    <img
+      class="team-hero__decor-bg team-hero__decor-bg_bg-22 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-22.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

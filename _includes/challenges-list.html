@@ -1,0 +1,50 @@
+{% assign fields = site.data.page_challenges.fields.challenges %}
+<div class="challenges-list">
+  <div class="challenges-list__container container">
+    <div class="challenges-list__content-col content-col content-col_left">
+      <ul class="challenges-list__list">
+        {% for item in fields.list %}
+          <li class="challenges-list__item">
+            <h2 class="challenges-list__title">
+              <a
+                class="challenges-list__link"
+                href="{{ item.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}
+                {% if item.label and item.label != '' %}
+                  <span class="challenges-list__label">
+                    {{ item.label | markdownify | remove: '<p>' | remove: '</p>' }}
+                  </span>
+                {% endif %}
+              </a>
+            </h2>
+            {% if item.text and item.text != '' %}
+              <div class="challenges-list__text">
+                {{ item.text | markdownify }}
+              </div>
+            {% endif %}
+            {% if item.more and item.more != '' %}
+              <div class="challenges-list__more">
+                {{ item.more | markdownify }}
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="challenges-list__decor-wrap decor-wrap">
+    <img
+      class="challenges-list__decor-bg challenges-list__decor-bg_bg-08 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-08.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="challenges-list__decor-bg challenges-list__decor-bg_bg-09 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-09.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

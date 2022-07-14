@@ -1,0 +1,15 @@
+{% assign fields = site.data.page_challenges.fields.hero %}
+<div class="challenges-hero">
+  <div class="challenges-hero__container container">
+    <h1 class="challenges-hero__heading heading-h1">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h1>
+  </div>
+  <div class="challenges-hero__decor-wrap decor-wrap">
+    <img
+      class="challenges-hero__decor-bg challenges-hero__decor-bg_bg-07 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-07.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{% assign fields = site.data.page_team.fields.team %}
+<div class="team-list">
+  <div class="team-list__container container">
+    <div class="team-list__content-col">
+      <h2 class="team-list__heading heading-h2 heading-h2_no-border">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h2>
+      <ul class="team-list__list">
+        {% for item in fields.list %}
+          <li class="team-list__item team-list__item_{{ item.slug }}">
+            <div class="team-list__inset">
+              <img
+                class="team-list__image"
+                src="{{'/assets/images/' | append: item.img | relative_url}}"
+                alt="{{ item.name }}"
+              />
+              <div class="team-list__description">
+                <strong class="team-list__name">
+                  {{ item.name | markdownify | remove: '<p>' | remove: '</p>' }}
+                </strong>
+                <span class="team-list__organization">
+                  {{ item.organization | markdownify | remove: '<p>' | remove: '</p>' }}
+                </span>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="team-list__decor-wrap decor-wrap">
+    <img
+      class="team-list__decor-bg team-list__decor-bg_bg-23 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-23.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

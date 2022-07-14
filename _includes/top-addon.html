@@ -1,0 +1,26 @@
+<nav class="top-addon">
+  {% for item in site.data.header.socials %}
+    <a
+      href="{{ item.url }}"
+      class="top-addon__link top-addon__link_{{item.slug}}"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="{{ item.title }}"
+    >
+      <span class="top-addon__link-title">
+        {{ item.title }}
+      </span>
+      <svg viewBox="0 0 52 52" class="top-addon__link-icon top-addon__link-icon_{{item.slug}}">
+        <use xlink:href="#icon-{{item.slug}}"></use>
+      </svg>
+    </a>
+  {% endfor %}
+  <a
+    href="{{ site.data.header.button.url }}"
+    class="top-addon__button button"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {{ site.data.header.button.title }}
+  </a>
+</nav>

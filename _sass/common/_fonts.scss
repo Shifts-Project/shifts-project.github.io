@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Inter;
+  src: url('#{$baseurl}/assets/fonts/inter/Inter-Regular.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/inter/Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('#{$baseurl}/assets/fonts/inter/Inter-Medium.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/inter/Inter-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('#{$baseurl}/assets/fonts/inter/Inter-SemiBold.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/inter/Inter-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('#{$baseurl}/assets/fonts/inter/Inter-Bold.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/inter/Inter-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: RobotoMono;
+  src: url('#{$baseurl}/assets/fonts/RobotoMono/RobotoMono-Light.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/RobotoMono/RobotoMono-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}

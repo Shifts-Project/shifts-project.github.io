@@ -1,0 +1,173 @@
+.home-about {
+  position: relative;
+  padding: 0 0 80px;
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 0 0 40px;
+  }
+}
+
+.home-about__container {
+  z-index: 1;
+}
+
+.home-about__comparison {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 40px -10px 0;
+}
+
+.home-about__comparison-col {
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 10px;
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+    margin: 0;
+
+    &:last-child {
+      margin-bottom: -25px;
+    }
+  }
+}
+
+/* .home-about__comparison-title {
+  display: block;
+  //margin: 0 0 21px;
+  margin: 0 0 5px;
+  font-weight: 500;
+  font-size: 24px;
+
+  @include breakpoint-lo($small-viewport) {
+    //margin: 0 0 16px;
+    font-size: 20px;
+  }
+}
+
+.home-about__comparison-subtitle {
+  display: block;
+  margin: 0 0 21px;
+  font-size: 16px;
+  opacity: 0.85;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 16px;
+    font-size: 14px;
+  }
+} */
+
+.home-about__comparison-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 0 20px;
+
+  @include breakpoint-lo($small-viewport) {
+    flex-wrap: wrap;
+    max-width: 422px;
+    margin: 0 0 35px;
+  }
+}
+
+.home-about__comparison-pic {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 58%;
+  max-width: 211px;
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.home-about__comparison-text {
+  display: block;
+  padding: 0 0 0 20px;
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+    padding: 14px 0 0;
+  }
+}
+
+.home-about__comparison-title {
+  display: block;
+  margin: 0 0 2px;
+  font-weight: 600;
+  font-size: 14px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 6px;
+    font-size: 20px;
+    opacity: 0.85;
+  }
+}
+
+.home-about__comparison-subtitle {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 11px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 14px;
+    font-size: 16px;
+    opacity: 0.85;
+  }
+}
+
+.home-about__comparison-label {
+  display: block;
+  font-size: 11px;
+  opacity: 0.55;
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 16px;
+  }
+}
+
+/* Decor */
+
+.home-about__decor-bg_bg-04 {
+  top: 90px;
+  left: 25%;
+  margin-left: -740px;
+  //margin-left: -1070px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: 610px;
+    left: 50%;
+    width: 600px;
+    margin-left: 80px;
+  }
+
+  @include breakpoint-lo($smaller-viewport) {
+    display: none;
+  }
+}
+
+.home-about__decor-bg_bg-05 {
+  bottom: -330px;
+  left: 25%;
+  margin-left: -1120px;
+  //margin-left: -880px;
+
+  @include breakpoint-lo($small-viewport) {
+    bottom: -120px;
+    left: 0;
+    width: 600px;
+    margin-left: -330px;
+  }
+
+  /* @include breakpoint-lo($smaller-viewport) {
+    bottom: -160px;
+    width: 500px;
+    margin-left: -100px;
+  } */
+}

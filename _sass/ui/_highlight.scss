@@ -1,0 +1,23 @@
+.highlight {
+  margin: 0;
+  padding: 18px 22px;
+  background: $color-code-bg;
+
+  pre {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 16px 18px;
+  }
+}
+
+.language-plaintext {
+  font: 300 16px/1.4 $font-family-code;
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 14px;
+  }
+}

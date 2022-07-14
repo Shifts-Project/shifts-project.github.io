@@ -1,0 +1,25 @@
+<nav class="top-menu">
+  {% for item in site.data.header.menu %}
+    <a
+      href="{% if item.external != true %}{{ site.baseurl }}{% endif %}{{ item.url }}"
+      class="top-menu__link
+        {% if item.url == page.url %}top-menu__link_active{% endif %}
+        {% comment %}
+        {% if item.page == page.slug %}top-menu__link_active{% endif %}
+        {% endcomment %}
+        {% if item.external %}top-menu__link_external{% endif %}
+        {% if item.mobileHide %}top-menu__link_mobile-hide{% endif %}"
+      {% if item.external %}
+      target="_blank"
+      rel="noopener noreferrer"
+      {% endif %}
+    >
+      {{ item.title }}
+      {% if item.external %}
+        <svg viewBox="0 0 16 17" class="top-menu__link-icon">
+          <use xlink:href="#icon-external"></use>
+        </svg>
+      {% endif %}
+    </a>
+  {% endfor %}
+</nav>

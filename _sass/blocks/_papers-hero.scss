@@ -1,0 +1,21 @@
+.papers-hero {
+  position: relative;
+}
+
+.papers-hero__container {
+  z-index: 1;
+}
+
+/* Decor */
+
+.papers-hero__decor-bg_bg-18 {
+  top: -645px;
+  left: 75%;
+  margin-left: -135px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -550px;
+    width: 500px;
+    margin-left: -145px;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="post">
+  <div class="post__container container">
+    <h1 class="post__heading heading-h1">
+      {{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h1>
+    <div class="post__content-col content-col content-col_left">
+      {% if page.image %}
+        <img
+          class="post__image"
+          src="{{'/assets/images/' | append: page.image | relative_url}}"
+          alt=""
+        />
+      {% endif %}
+      <div class="post__date">{{ page.date | date_to_long_string }}</div>
+      <div class="post__text">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <div class="post__decor-wrap decor-wrap">
+    <img
+      class="post__decor-bg post__decor-bg_bg-27 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-27.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="post__decor-bg post__decor-bg_bg-28 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-28.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="post__decor-bg post__decor-bg_bg-29 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-29.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

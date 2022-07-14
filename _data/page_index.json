@@ -1,0 +1,137 @@
+{
+  "fields": {
+    "hero": {
+      "heading": "Shifts",
+      "intro": "The Shifts Project is&nbsp;an&nbsp;international collaboration of&nbsp;academic and industrial researchers dedicated to&nbsp;studying distributional shift&nbsp;&mdash; one of&nbsp;the biggest challenges in&nbsp;applying machine learning to&nbsp;high-stakes real-world tasks.",
+      "github": {
+        "enableOnMobile": false,
+        "url": "https://github.com/Shifts-Project/shifts",
+        "text": "GitHub"
+      },
+      "description": "The goal of&nbsp;the project is&nbsp;to&nbsp;raise awareness of&nbsp;distributional shift, collect datasets and benchmarks, facilitate cross-disciplinary research, and organize challenges and workshops.",
+      "cta": {
+        "enable": true,
+        "url": "https://forms.gle/DnC9mVCYgHhwCGWy5",
+        "text": "Stay tuned for Shifts Challenge 2022"
+      },
+      "providers": {
+        "text": "Challenge Data provided by:",
+        "enable": true,
+        "list": [
+          {
+            "slug": "deepsea",
+            "svg": true,
+            "title": "DeepSea",
+            "url": "https://www.deepsea.ai"
+          },
+          {
+            "slug": "johns-hopkins",
+            "svg": true,
+            "title": "Johns Hopkins University",
+            "url": "https://www.jhu.edu/"
+          },
+          {
+            "slug": "ofsep",
+            "svg": true,
+            "title": "OFSEP",
+            "url": "https://www.ofsep.org/"
+          },
+          {
+            "slug": "ljubljani",
+            "svg": true,
+            "title": "University of Ljubljana",
+            "url": "https://www.uni-lj.si/university/"
+          },
+          {
+            "slug": "basel",
+            "svg": false,
+            "title": "University of Basel",
+            "url": "https://www.unibas.ch/"
+          }
+        ]
+      }
+    },
+    "about": {
+      "heading": "About",
+      "blocks": [
+        {
+          "title": "What is&nbsp;distributional shift?",
+          "text": "Distributional shift is&nbsp;the mismatch between training and deployment data. Generalizing to &lsquo;shifted&rsquo; data is&nbsp;challenging for ML&nbsp;models. Typically, the performance of&nbsp;ML modes will drop as&nbsp;the degree of&nbsp;shift increases. For example, both human and&nbsp;AI drivers trained to&nbsp;drive on&nbsp;the right side of&nbsp;the road can struggle in&nbsp;countries with left-sided driving. Distributional shift is&nbsp;ubiquitous in&nbsp;machine learning and is&nbsp;especially important to&nbsp;be&nbsp;aware of&nbsp;in&nbsp;safety-critical applications."
+        },
+        {
+          "title": "What are the obstacles?",
+          "text": "Until recently, most work on&nbsp;improving robustness to&nbsp;shift and predictive uncertainty estimation has been conducted on&nbsp;small-scale image classification datasets which contain synthetic or&nbsp;unrealistic forms of&nbsp;distributional shift. Conclusions drawn from these datasets rarely carry over to&nbsp;industrial-scale ML&nbsp;applications. The lack of&nbsp;large, diverse and industrially sourced datasets with examples of &lsquo;real&rsquo; distributional shifts makes it&nbsp;difficult to&nbsp;validate new approaches and reach conclusions that are broadly applicable to&nbsp;real-life applications.",
+          "comparison": {
+            "col1": {
+              "title": "Synthetic Shifts",
+              "subtitle": "Image Classification",
+              "items": [
+                {
+                  "img": "comparison/synthetic-in-domain.png",
+                  "text": "In-domain example: A&nbsp;real strawberry"
+                },
+                {
+                  "img": "comparison/synthetic-shifted.png",
+                  "text": "Shifted example: A&nbsp;paper-mache strawberry"
+                }
+              ]
+            },
+            "col2": {
+              "title": "Real-world Shifts",
+              "subtitle": "Autonomous Vehicle Perception",
+              "items": [
+                {
+                  "img": "comparison/real-in-domain-1.png",
+                  "text": "In-domain example: Highway in&nbsp;summer. Daytime, clear sky, visible road markings, high visibility situation"
+                },
+                {
+                  "img": "comparison/real-in-domain-2.png",
+                  "text": "Shifted example: Highway in&nbsp;winter. Nighttime, road markings obscured by&nbsp;snow, blizzard, low visibility situation"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "What can we&nbsp;do&nbsp;about&nbsp;it?",
+          "text": "Ideally, machine learning models should generalize well under a&nbsp;range of&nbsp;distributional shifts. If&nbsp;they fail to&nbsp;generalize, these models should indicate this using uncertainty estimates, which enables&nbsp;us to&nbsp;take actions that improve the safety and reliability of&nbsp;the ML&nbsp;system. Techniques that induce invariant or&nbsp;equivariant representations, prevent feature collapse and allow learning more information from data will improve generalization. Techniques which yield quantities sensitive to&nbsp;the degree of&nbsp;distributional shift will yield better uncertainty estimates."
+        },
+        {
+          "title": "Our goal",
+          "text": "The goal of&nbsp;the Shifts Project is&nbsp;to&nbsp;build a&nbsp;cross-disciplinary international community, bringing together core-ML and applied ML&nbsp;researchers. Through this we&nbsp;aim to&nbsp;collect new datasets sourced from industry that feature &lsquo;in-the-wild&rsquo; distributional shift and make them freely available. This will enable better research in&nbsp;the area with outcomes that can be&nbsp;directly applied in-production. The Shifts Project will be&nbsp;organizing events, challenges and workshops to&nbsp;popularize these new datasets and raise awareness of&nbsp;the problem of&nbsp;distributional shift among the general ML&nbsp;community."
+        }
+      ]
+    },
+    "news": {
+      "heading": "News &amp;&nbsp;Events",
+      "published": "Published: ",
+      "more": {
+        "url": "/news",
+        "text": "See more news"
+      }
+    },
+    "contact": {
+      "intro": "For general questions about Shifts, write to&nbsp;[info@shiftsproject.io](mailto:info@shiftsproject.io) or&nbsp;create an&nbsp;issue in&nbsp;our [GitHub repository](https://github.com/Shifts-Project/shifts).",
+      "list": [
+        {
+          "slug": "social-groups",
+          "title": "Mailing List",
+          "text": "A&nbsp;place where you can became a&nbsp;part of&nbsp;our scientifiс community.",
+          "url": "https://forms.gle/DnC9mVCYgHhwCGWy5"
+        },
+        {
+          "slug": "social-twitter",
+          "title": "Twitter",
+          "text": "A&nbsp;place where you can find fresh news and updates about the project.",
+          "url": "https://twitter.com/ShiftsProject"
+        },
+        {
+          "slug": "social-discord",
+          "title": "Discord",
+          "text": "A&nbsp;place where you can spend time together with our people.",
+          "url": "https://discord.gg/mKMgRSXQnX"
+        }
+      ]
+    }
+  }
+}

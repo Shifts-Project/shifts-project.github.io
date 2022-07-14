@@ -1,0 +1,23 @@
+{
+  "fields": {
+    "breadcrumbs": {
+      "home": {
+        "title": "Shifts",
+        "url": "/"
+      },
+      "list": [
+        {
+          "title": "News",
+          "url": "/news"
+        }
+      ]
+    },
+    "hero": {
+      "heading": "News &amp;&nbsp;Events"
+    },
+    "news": {
+      "published": "Published: ",
+      "more": "Learn more"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<header class="header" id="header">
+  <input
+    class="header__checkbox"
+    id="headerCheckbox"
+    type="checkbox"
+  />
+  <div class="header__container container">
+    <div class="header__row">
+      {% include logo-header.html %}
+      <div class="header__controls">
+        {% include top-menu.html %}
+        {% include top-addon.html %}
+      </div>
+      <div class="header__toggle">
+        <label
+          class="header__toggle-label"
+          for="headerCheckbox"
+        >
+          <span>{{ site.data.header.menuTitle }}</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</header>

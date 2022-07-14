@@ -1,0 +1,36 @@
+<div class="breadcrumbs">
+  <div class="breadcrumbs__container container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a
+          class="breadcrumbs__link"
+          href="{{ site.baseurl }}{{ fields.home.url }}"
+        >
+          {{ fields.home.title | markdownify | remove: '<p>' | remove: '</p>' }}
+        </a>
+      </li>
+      {% for item in fields.list %}
+        <li class="breadcrumbs__item">
+          &nbsp;/
+          <a
+            class="breadcrumbs__link"
+            href="{{ site.baseurl }}{{ item.url }}"
+          >
+            {{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}
+          </a>
+        </li>
+      {% endfor %}
+      {% if fields.appendPost %}
+        <li class="breadcrumbs__item">
+          &nbsp;/
+          <a
+            class="breadcrumbs__link"
+            href="{{ site.baseurl }}{{ page.url }}"
+          >
+            {{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+.dataset-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 60px;
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 0 0 40px;
+  }
+}
+
+.dataset-content__section {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 78px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 40px;
+  }
+}
+
+.dataset-content__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dataset-content__video {
+  display: block;
+  width: 100%;
+  border: solid 0.8px $color-gray-light;
+}
+
+.dataset-content__code {
+  margin: 22px 0 0;
+}
+
+/* Decor */
+
+.dataset-content__decor-bg_bg-10 {
+  top: -20px;
+  left: 25%;
+  margin-left: -1310px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -30px;
+    width: 500px;
+    margin-left: -550px;
+  }
+}
+
+.dataset-content__decor-bg_bg-11 {
+  top: 9.5%;
+  left: 75%;
+  margin-left: -460px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: 12%;
+    width: 500px;
+    margin-left: -50px;
+  }
+}
+
+.dataset-content__decor-bg_bg-12 {
+  top: 22.5%;
+  left: 25%;
+  margin-left: -1270px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: 31%;
+    width: 500px;
+    margin-left: -480px;
+  }
+}
+
+.dataset-content__decor-bg_bg-13 {
+  top: 38.5%;
+  left: 25%;
+  margin-left: -810px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: 39%;
+    width: 500px;
+    margin-left: -480px;
+  }
+}
+
+.dataset-content__decor-bg_bg-14 {
+  top: 49.5%;
+  left: 75%;
+  margin-left: -220px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: 55%;
+    width: 500px;
+    margin-left: -210px;
+  }
+}
+
+.dataset-content__decor-bg_bg-15 {
+  top: 62%;
+  left: 25%;
+  margin-left: -1090px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: 62%;
+    width: 500px;
+    margin-left: -480px;
+  }
+}
+
+.dataset-content__decor-bg_bg-16 {
+  top: 75.5%;
+  left: 75%;
+  margin-left: -80px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: 77.5%;
+    width: 500px;
+    margin-left: -80px;
+  }
+}
+
+.dataset-content__decor-bg_bg-17 {
+  bottom: -10px;
+  left: 25%;
+  margin-left: -950px;
+
+  @include breakpoint-lo($small-viewport) {
+    bottom: 0;
+    width: 500px;
+    margin-left: -460px;
+  }
+}

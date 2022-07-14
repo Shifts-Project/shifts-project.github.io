@@ -1,0 +1,56 @@
+{
+  "menuTitle": "Menu",
+  "menu": [
+    {
+      "title": "News",
+      "url": "/news",
+      "page": "news",
+      "external": false
+    },
+    {
+      "title": "Challenges",
+      "url": "/challenges",
+      "page": "challenges",
+      "external": false
+    },
+    {
+      "title": "Dataset &amp;&nbsp;Benchmarks",
+      "url": "/dataset",
+      "page": "dataset",
+      "external": false
+    },
+    {
+      "title": "Papers",
+      "url": "/papers",
+      "page": "papers",
+      "external": false
+    },
+    {
+      "title": "Team",
+      "url": "/team",
+      "page": "team",
+      "external": false
+    }
+  ],
+  "socials": [
+    {
+      "slug": "social-groups",
+      "title": "Mailing List",
+      "url": "https://forms.gle/DnC9mVCYgHhwCGWy5"
+    },
+    {
+      "slug": "social-twitter",
+      "title": "Twitter",
+      "url": "https://twitter.com/ShiftsProject"
+    },
+    {
+      "slug": "social-discord",
+      "title": "Discord",
+      "url": "https://discord.gg/mKMgRSXQnX"
+    }
+  ],
+  "button": {
+    "url": "https://github.com/Shifts-Project/shifts",
+    "title": "GitHub"
+  }
+}

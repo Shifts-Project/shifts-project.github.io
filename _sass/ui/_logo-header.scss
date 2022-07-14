@@ -1,0 +1,41 @@
+.logo-header {
+  position: relative;
+}
+
+.logo-header__image {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s, color 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logo-header__icon {
+  display: block;
+  width: 34px;
+  height: 48px;
+}
+
+.logo-header__icon-text {
+  display: block;
+  width: 64px;
+  height: 19px;
+  margin: 0 0 0 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  .header_sticky-past-hero & {
+    opacity: 1;
+  }
+}
+
+.logo-header__title {
+  position: absolute;
+  left: -1000em;
+}

@@ -1,0 +1,9 @@
+.content-col {
+  max-width: $width-content-col;
+  margin: 0 0 0 auto;
+
+  &_left {
+    max-width: $width-content-col-l;
+    margin: 0;
+  }
+}

@@ -1,0 +1,80 @@
+{% assign fields = site.data.page_papers.fields.papers %}
+<div class="papers-list">
+  <div class="papers-list__container container">
+    <div class="papers-list__content-col content-col content-col_left">
+      <ul class="papers-list__list">
+        {% for item in fields.list %}
+          <li class="papers-list__item">
+            <h2 class="papers-list__title heading-h2 heading-h2_no-border">
+              <a
+                class="papers-list__link"
+                href="{{ item.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}
+                <svg viewBox="0 0 16 17" class="papers-list__link-icon">
+                  <use xlink:href="#icon-external"></use>
+                </svg>
+              </a>
+            </h2>
+            {% if item.img and item.img != '' %}
+              <div class="papers-list__hero">
+                <img
+                  class="papers-list__image"
+                  src="{{'/assets/images/' | append: item.img | relative_url}}"
+                  alt=""
+                />
+              </div>
+            {% endif %}
+            {% if item.video and item.video != '' %}
+              <div class="papers-list__hero">
+                <div class="papers-list__video-wrap">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    webkit-playsinline="webkit-playsinline"
+                    preload="auto"
+                    {% if item.videoPoster and item.videoPoster != '' %}
+                    poster="{{'/assets/images/' | append: item.videoPoster | relative_url}}"
+                    {% endif %}
+                    class="papers-list__video"
+                  >
+                    <source
+                      src="{{'/assets/images/' | append: item.video | relative_url}}"
+                    />
+                  </video>
+                </div>
+              </div>
+            {% endif %}
+            <div class="papers-list__text">
+              {{ item.text | markdownify }}
+            </div>
+            <div class="papers-list__more">
+              {{ item.more | markdownify }}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="papers-list__decor-wrap decor-wrap">
+    <img
+      class="papers-list__decor-bg papers-list__decor-bg_bg-19 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-19.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="papers-list__decor-bg papers-list__decor-bg_bg-20 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-20.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="papers-list__decor-bg papers-list__decor-bg_bg-21 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-21.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

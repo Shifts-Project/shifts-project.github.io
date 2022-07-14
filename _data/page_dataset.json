@@ -1,0 +1,149 @@
+{
+  "fields": {
+    "breadcrumbs": {
+      "home": {
+        "title": "Shifts",
+        "url": "/"
+      },
+      "list": [
+        {
+          "title": "Dataset & Benchmarks",
+          "url": "/dataset"
+        }
+      ]
+    },
+    "hero": {
+      "heading": "Dataset &amp;&nbsp;Benchmarks",
+      "text": "One of&nbsp;the goals of&nbsp;Shifts is&nbsp;to&nbsp;provide a&nbsp;standardized collection of&nbsp;benchmarks for evaluation robustness of&nbsp;distributional shift and uncertainty quality across a&nbsp;range of&nbsp;tasks and data modalities. This collection of&nbsp;benchmarks consists of&nbsp;datasets taken directly from large-scale industrial sources and services where distributional shift is&nbsp;ubiquitous&nbsp;&mdash; settings as&nbsp;close to&nbsp;&ldquo;in&nbsp;the wild&rdquo; as&nbsp;possible. All of&nbsp;these data modalities and tasks are affected by&nbsp;distributional shift and pose interesting challenges with respect to&nbsp;uncertainty estimation."
+    },
+    "content": {
+      "list": [
+        {
+          "title": "Weather Forecasting",
+          "anchor": "weather-forecasting",
+          "img": "dataset/weather.gif",
+          "video": "",
+          "videoPoster": "",
+          "blocks": [
+            {
+              "title": "Motivation",
+              "text": "People are increasingly using ML-based weather services to&nbsp;obtain forecasts about the weather at&nbsp;a&nbsp;specific desired location and time. People rely on&nbsp;these forecasts to&nbsp;be&nbsp;accurate so&nbsp;that they can confidently plan their day, weekends and holidays. However, the weather is&nbsp;a&nbsp;complex, highly non-stationary system which evolves over time&nbsp;&mdash; the weather on&nbsp;May 5th 2021&nbsp;is likely to&nbsp;be&nbsp;different from May 5th 2022. Furthermore, ground-stations and meteorological radar are not uniformly distributed around the world&nbsp;&mdash; there is&nbsp;less information available about some locations. Ground-stations can also fail to&nbsp;communicate and transmit their readings. Finally, weather data is&nbsp;presented in&nbsp;heterogeneous tabular form, which not all&nbsp;ML models can handle well. ML&nbsp;weather forecasting systems need to&nbsp;be&nbsp;robust to&nbsp;shifts in&nbsp;time, location, and missing values and work well with tabular data to&nbsp;regularly produce reliable and accurate forecasts, especially in&nbsp;coastal and mountainous regions, where the weather can be&nbsp;hazardous. They should also indicate when they are unable to&nbsp;provide an&nbsp;accurate forecast. To&nbsp;better investigate robustness and uncertainty estimation in&nbsp;heterogeneous tabular data, the Yandex Weather service has provided the Shifts Weather Forecasting dataset. This data is&nbsp;also valuable as&nbsp;it&nbsp;represents similar challenges to&nbsp;the ones faced in&nbsp;high-risk applications, such as&nbsp;medical diagnostics and financial forecasting, which often contain a&nbsp;heterogeneous feature set, drift over time, non-uniform distribution over sub-populations and missing values."
+            },
+            {
+              "title": "Data Description",
+              "text": "The Shifts Weather Prediction dataset contains both a&nbsp;scalar regression and a&nbsp;multi-class classification task. Specifically, at&nbsp;a&nbsp;particular latitude, longitude, and timestamp, one must predict either the air temperature at&nbsp;two meters above the ground or&nbsp;the precipitation class, given targets and features derived from weather station measurements and weather forecast models. The data consists of&nbsp;10&nbsp;million 129-column entries: 123 meteorological features, 4&nbsp;meta-data attributes (time, latitude, longitude and climate type) and 2&nbsp;targets&nbsp;&mdash; temperature (target for regression task) and precipitation class (target for classification task). It&nbsp;is&nbsp;important to&nbsp;note that the features are highly heterogeneous, i.e., they are of&nbsp;different types and scales. The full data is&nbsp;distributed uniformly between September 1&nbsp;st, 2018, and September 1&nbsp;st, 2019, with samples across all climate types. This data is&nbsp;used by&nbsp;Yandex for real-time weather forecasts and represents a&nbsp;real industrial application. \n\nTo&nbsp;provide a&nbsp;standard benchmark that contains both in-domain and shifted data, we&nbsp;define a&nbsp;particular &ldquo;canonical partitioning&rdquo; of&nbsp;the full dataset into training, development (dev), and evaluation (eval) datasets. The training, in-domain dev (dev_in) and in-domain eval (eval_in) data consist of&nbsp;measurements made from September 2018 till April 8th, 2019 for climate types Tropical, Dry, and Mild Temperate. The shifted dev (dev_out) data consists of&nbsp;measurements made from 8th July till 1st September 2019 for the climate type Snow. 50K data points are sub-sampled for the climate type Snow within this time range to&nbsp;construct dev_out. The shifted eval data is&nbsp;further shifted than the out-of-domain development data; measurements are taken from 14th May till 8th July 2019, which is&nbsp;more distant in&nbsp;terms of&nbsp;the time of&nbsp;the year from the in-domain data compared to&nbsp;the out-of-domain development data. The climate types are restricted to&nbsp;Snow and Polar. See [paper](https://arxiv.org/abs/2107.07455) for further details."
+            },
+            {
+              "title": "License",
+              "text": "[Creative Commons CC&nbsp;BY NC&nbsp;SA&nbsp;4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+            }
+          ],
+          "citation": {
+            "title": "Citation",
+            "code": "@inproceedings{\n  malinin2021shifts,\n  title={Shifts: A Dataset of Real Distributional Shift Across Multiple Large-Scale Tasks},\n  author={Andrey Malinin and Neil Band and Yarin Gal and Mark Gales and Alexander Ganshin and German Chesnokov and Alexey Noskov and Andrey Ploskonosov and Liudmila Prokhorenkova and Ivan Provilkov and Vatsal Raina and Vyas Raina and Denis Roginskiy and Mariya Shmatova and Panagiotis Tigas and Boris Yangel},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},\n  year={2021},\n  url={https://openreview.net/forum?id=qM45LHaWM6E}\n}"
+          }
+        },
+        {
+          "title": "Machine Translation",
+          "anchor": "machine-translation",
+          "img": "dataset/translate.gif?v=1",
+          "video": "",
+          "videoPoster": "",
+          "blocks": [
+            {
+              "title": "Motivation",
+              "text": "Translation services, such as&nbsp;Google or&nbsp;Yandex Translate, often encounter atypical and unusual use of&nbsp;language in&nbsp;their translation queries. This typically includes slang, profanities, poor grammar, orthography and punctuation, emojis and mixtures of&nbsp;different languages. This poses a&nbsp;challenge to&nbsp;modern translation systems. Therefore, it&nbsp;is&nbsp;important for models to&nbsp;both be&nbsp;robust to&nbsp;atypical language use to&nbsp;provide high-quality translations, as&nbsp;well as&nbsp;to&nbsp;indicate when they are unable to&nbsp;provide a&nbsp;quality translation. Furthermore, translation is&nbsp;inherently a&nbsp;structured prediction task, as&nbsp;there are dependencies between the tokens in&nbsp;the output sequence. Often we&nbsp;must make assumptions about the form of&nbsp;these dependencies. Depending on&nbsp;the assumptions made, it&nbsp;can be&nbsp;challenging to&nbsp;obtain a&nbsp;theoretically sound measure of&nbsp;uncertainty. The Yandex translation has collected a&nbsp;new dataset which features data taken from a&nbsp;translation service, as&nbsp;well as&nbsp;data sourced from Reddit. Thus, the Shifts Translation dataset contains examples of&nbsp;both clean, formal and highly atypical language usage. Altogether, this makes this an&nbsp;insightful benchmark for evaluating robustness and uncertainty quality on&nbsp;structured data. See [paper](https://arxiv.org/abs/2107.07455) for further details."
+            },
+            {
+              "title": "Data Description",
+              "text": "The Shifts Translation dataset contains training, development (dev) and evaluation (eval) data, where each set consists of&nbsp;pairs of&nbsp;source and target sentences in&nbsp;English and Russian, respectively. As&nbsp;most production Neural Machine Translation (NMT) systems are built using a&nbsp;variety of&nbsp;general purpose corpora, we&nbsp;use the freely available WMT&lsquo;20 En-Ru corpus as&nbsp;training data. This dataset primarily focuses on&nbsp;parliamentary and news data that&nbsp;is, for the most part, grammatically and orthographically correct with formal language use. The dev and eval datasets consist of&nbsp;an&nbsp;&ldquo;in-domain&rdquo; partition matched to&nbsp;the training data, and a&nbsp;shifted partition, which contains examples of&nbsp;atypical language usage. The in-domain dev and eval sets are Newstest&lsquo;19 En-Ru and a&nbsp;news corpus from the GlobalVoices news service, respectively. For the shifted development data we&nbsp;use the Reddit corpus prepared for the WMT&lsquo;19 robustness challenge. This data contains examples of&nbsp;slang, acronyms, lack of&nbsp;punctuation, poor orthography, concatenations, profanity, and poor grammar, among other forms of&nbsp;atypical language usage. This data is&nbsp;representative of&nbsp;the types of&nbsp;inputs that machine translation services find challenging. As&nbsp;Russian target annotations are not available, we&nbsp;pass the data through a&nbsp;two-stage process, where orthographic, grammatical, and punctuation mistakes are corrected, and the source-side English sentences are translated into Russian by&nbsp;expert in-house Yandex translators. The development set is&nbsp;constructed from the same 1400-sentence test-set used for the WMT&lsquo;19 robustness challenge. For the evaluation set, we&nbsp;use the open-source MTNT crawler which connects to&nbsp;the Reddit API to&nbsp;collect a&nbsp;further set of&nbsp;3,000 English sentences from Reddit, which is&nbsp;similarly corrected and translated. The shifted dev and eval data are also annotated with 7&nbsp;non-exclusive anomaly flags."
+            },
+            {
+              "title": "License",
+              "text": "[Creative Commons CC&nbsp;BY NC&nbsp;SA&nbsp;4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+            }
+          ],
+          "citation": {
+            "title": "Citation",
+            "code": "@inproceedings{\n  malinin2021shifts,\n  title={Shifts: A Dataset of Real Distributional Shift Across Multiple Large-Scale Tasks},\n  author={Andrey Malinin and Neil Band and Yarin Gal and Mark Gales and Alexander Ganshin and German Chesnokov and Alexey Noskov and Andrey Ploskonosov and Liudmila Prokhorenkova and Ivan Provilkov and Vatsal Raina and Vyas Raina and Denis Roginskiy and Mariya Shmatova and Panagiotis Tigas and Boris Yangel},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},\n  year={2021},\n  url={https://openreview.net/forum?id=qM45LHaWM6E}\n}"
+          }
+        },
+        {
+          "title": "Vehicle Motion Prediction",
+          "anchor": "vehicle-motion-prediction",
+          "img": "",
+          "video": "papers/papers-hero-01.mp4?v=1",
+          "videoPoster": "papers/papers-hero-01.png",
+          "blocks": [
+            {
+              "title": "Motivation",
+              "text": "The autonomous driving domain has strict safety requirements, ubiquitous distributional shift and the risks associated with errors are high. During development, most self-driving companies concentrate their fleet in&nbsp;a&nbsp;few locations. Robustly generalizing from old locations to&nbsp;new ones is&nbsp;challenging, as&nbsp;new locations can differ in&nbsp;routes, driving styles, types of&nbsp;cars, road signs and so&nbsp;on. Thus, fleets face distributional shift when they begin operating in&nbsp;new locations. It&nbsp;is&nbsp;also critical for a&nbsp;planning model to&nbsp;recognize when this transferred knowledge is&nbsp;insufficient upon encountering unfamiliar data. For example, when the model&rsquo;s uncertainty is&nbsp;high, the vehicle can exercise extra caution or&nbsp;request assistance from a&nbsp;remote operator. \n\nMotion prediction is&nbsp;among the most important problems in&nbsp;the autonomous driving domain. It&nbsp;involves predicting the distribution over possible future states of&nbsp;other agents around the self-driving car at&nbsp;a&nbsp;number of&nbsp;moments in&nbsp;time to&nbsp;avoid planning a&nbsp;potential collision. This problem is&nbsp;complicated by&nbsp;the fact that the future is&nbsp;inherently uncertain. For example, we&nbsp;cannot know the high-level navigational goals of&nbsp;other agents, or&nbsp;even their low-level tendency to&nbsp;turn right or&nbsp;left at&nbsp;a&nbsp;T-junction if&nbsp;they fail to&nbsp;indicate. In&nbsp;order for the planning module to&nbsp;make the right decision, this uncertainty must be&nbsp;precisely quantified. This is&nbsp;complicated by&nbsp;motion prediction being a&nbsp;continuous structured prediction task, making it&nbsp;non-trivial to&nbsp;obtain meaningful measures of&nbsp;uncertainty. Altogether, this makes motion prediction an&nbsp;interesting task for investigating uncertainty estimation and robustness to&nbsp;distributional shift. To&nbsp;this end, the Yandex Self-Driving Group has provided the Shifts Vehicle Motion Prediction dataset to&nbsp;be&nbsp;used for examining the implications of&nbsp;distributional shift in&nbsp;self-driving vehicles."
+            },
+            {
+              "title": "Data Description",
+              "text": "The Shifts Motion Prediction dataset was collected by&nbsp;the Yandex Self-Driving Group (SDG) fleet and is&nbsp;the largest vehicle motion prediction dataset released to&nbsp;date, containing 600,000&nbsp;scenes. These scenes span six locations, three seasons, three times of&nbsp;day, and four weather conditions. Each scene includes information about the state of&nbsp;dynamic objects and an&nbsp;HD map. Each scene is&nbsp;10&nbsp;seconds long and is&nbsp;divided into 5&nbsp;seconds of&nbsp;context features and 5&nbsp;seconds of&nbsp;ground truth targets for prediction, separated by&nbsp;the time T = 0. The goal is&nbsp;to&nbsp;predict the movement trajectory of&nbsp;vehicles at&nbsp;time T ∈ (0, 5] based on&nbsp;the information available for time T ∈ [&minus;5, 0]. The data contains training, development (dev) and evaluation (eval) sets. In&nbsp;order to&nbsp;provide a&nbsp;standardized benchmark, we&nbsp;define a&nbsp;canonical partitioning. Distributionally shifted dev data is&nbsp;taken from Skolkovo, Modiin, and Innopolis. Distributionally shifted eval data is&nbsp;taken from Tel Aviv and Ann Arbor. We&nbsp;also remove all cases of&nbsp;precipitation from the in-domain sets, while distributionally shifted datasets include precipitation. See [paper](https://arxiv.org/abs/2107.07455) for further details."
+            },
+            {
+              "title": "License",
+              "text": "[Creative Commons CC&nbsp;BY NC&nbsp;SA&nbsp;4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+            }
+          ],
+          "citation": {
+            "title": "Citation",
+            "code": "@inproceedings{\n  malinin2021shifts,\n  title={Shifts: A Dataset of Real Distributional Shift Across Multiple Large-Scale Tasks},\n  author={Andrey Malinin and Neil Band and Yarin Gal and Mark Gales and Alexander Ganshin and German Chesnokov and Alexey Noskov and Andrey Ploskonosov and Liudmila Prokhorenkova and Ivan Provilkov and Vatsal Raina and Vyas Raina and Denis Roginskiy and Mariya Shmatova and Panagiotis Tigas and Boris Yangel},\n  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},\n  year={2021},\n  url={https://openreview.net/forum?id=qM45LHaWM6E}\n}"
+          }
+        },
+        {
+          "title": "Vessel Power Estimation",
+          "anchor": "vessel-power-estimation",
+          "img": "",
+          "video": "",
+          "videoPoster": "",
+          "blocks": [
+            {
+              "title": "Motivation",
+              "text": "Maritime transport delivers around&nbsp;90% of&nbsp;the world&rsquo;s traded goods, emitting almost a&nbsp;billion tonnes of&nbsp;CO2 annually and increasing. Energy consumption varies greatly depending on&nbsp;the chosen routes, speeds, operation and maintenance of&nbsp;ships. The complex underlying relationships between are not fully known or&nbsp;taken into account at&nbsp;the time these decisions are made, leading to&nbsp;significant fuel waste. Training accurate power consumption models can help significantly reduce costs and emissions. However, significant distributional shifts can be&nbsp;expected to&nbsp;occur between the real use cases of&nbsp;models and the data used to&nbsp;train and evaluate them. Weather and sea conditions that affect vessel power consumption are highly variable based on&nbsp;seasonality, geographical location and vessel state and cannot all be&nbsp;fully measured. Furthermore, data relevant to&nbsp;predicting a&nbsp;vessel&rsquo;s power consumption is&nbsp;typically presented in&nbsp;heterogeneous tabular form, which can be&nbsp;challenging for some&nbsp;ML models to&nbsp;handle. Inaccurate power prediction and the resultant errors in&nbsp;fuel planning and optimisation can be&nbsp;considerably costly and potentially hazardous. Thus, the development of&nbsp;uncertainty-aware and robust models is&nbsp;essential to&nbsp;enable the effective deployment of&nbsp;this technology to&nbsp;reduce the carbon footprint of&nbsp;global supply chains. DeepSea has provided the Shifts Vessel Power Estimation dataset to&nbsp;facilitate investigation of&nbsp;distributional shift in&nbsp;shipping and the development of&nbsp;robust models."
+            },
+            {
+              "title": "Data Description",
+              "text": "The Shifts Vessel Power Consumption dataset features a&nbsp;scalar regression task that involves predicting the current power consumption of&nbsp;a&nbsp;merchant vessel given features describing the vessel and weather conditions. The dataset consists of&nbsp;10&nbsp;measurements sampled every minute from sensors on-board a&nbsp;merchant vessel over a&nbsp;span of&nbsp;4&nbsp;years, cleaned and augmented with weather data from a&nbsp;third-party provider. The target is&nbsp;the vessel&rsquo;s main engine shaft power, i.e. the energy it&nbsp;expends per second to&nbsp;maintain its speed. The task is&nbsp;to&nbsp;predict this power (which in&nbsp;turn can be&nbsp;used to&nbsp;predict fuel consumption given an&nbsp;engine model) from the vessel&rsquo;s speed, draft, time since last dry dock cleaning and various weather and sea conditions. Thus, altogether, each record contains 12&nbsp;entries&nbsp;&mdash; 10&nbsp;features, 1&nbsp;time index and 1&nbsp;target. Distributional shift arises from hull performance degradation over time due to&nbsp;fouling, sensor calibration drift, and variations in&nbsp;non-measured sea conditions such as&nbsp;water temperature and salinity, as&nbsp;well as&nbsp;sensor noise, measurement and transmission errors, and uncertainty in&nbsp;historical weather. Additionally, all this varies in&nbsp;different regions and times of&nbsp;year. \n\nThe Shifts Vessel Power estimation datasets contains two major components&nbsp;&mdash; a &lsquo;real&rsquo; and a &lsquo;synthetic&rsquo; dataset. The real dataset contains features and power consumption recorded from a&nbsp;real vessel. The synthetic dataset contains the same features, but with power consumption estimates produced by&nbsp;a&nbsp;physics-based model. Additionally, the synthetic dataset contains a &lsquo;generalization set&rsquo;, which contains samples from the convex hull of&nbsp;feature values. The synthetic data is&nbsp;meant for model exploration and development, while the real dataset is&nbsp;meant to&nbsp;represent a&nbsp;newly introduced vessel for which a&nbsp;power usage estimation model needs to&nbsp;be&nbsp;developed. To&nbsp;provide a&nbsp;standard benchmark, the both the real and synthetic data was partitioned along two dimensions: wind speed and time. Wind speed serves as&nbsp;a&nbsp;proxy for unmeasured components of&nbsp;the sea state, while partitioning in&nbsp;time aims to&nbsp;capture effects such as&nbsp;fouling and sensor drift.&nbsp;5&nbsp;subsets are made&nbsp;&mdash; train, in-domain development and evaluation and shifted development and evaluation sets. In&nbsp;addition, the synthetic dataset also contains a&nbsp;large generalization set. See [paper](https://arxiv.org/abs/2206.15407) for further details."
+            },
+            {
+              "title": "License",
+              "text": "[Creative Commons CC&nbsp;BY NC&nbsp;SA&nbsp;4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+            }
+          ],
+          "citation": {
+            "title": "Citation",
+            "code": "@article{\n  malinin2022shifts,\n  title={Shifts 2.0: Extending The Dataset of Real Distributional Shifts},\n  author={Malinin, Andrey and Athanasopoulos, Andreas and Barakovic, Muhamed and Cuadra, Meritxell Bach and Gales, Mark JF and Granziera, Cristina and Graziani, Mara and Kartashev, Nikolay and Kyriakopoulos, Konstantinos and Lu, Po-Jui and others},\n  journal={arXiv preprint arXiv:2206.15407},\n  year={2022}\n}"
+          }
+        },
+        {
+          "title": "White Matter Multiple Sclerosis Lesion Segmentation",
+          "anchor": "white-matter-multiple-sclerosis-lesion-segmentation",
+          "img": "",
+          "video": "papers/papers-hero-02.mp4?v=1",
+          "videoPoster": "papers/papers-hero-02.png",
+          "blocks": [
+            {
+              "title": "Motivation",
+              "text": "Multiple Sclerosis (MS) is&nbsp;a&nbsp;debilitating, incurable and progressive disorder of&nbsp;the central nervous system that negatively impacts an&nbsp;individual&rsquo;s quality of&nbsp;life. Estimates claim that every five minutes a&nbsp;person is&nbsp;diagnosed with&nbsp;MS, reaching 2.8 million cases in&nbsp;2020 and that&nbsp;MS is&nbsp;two-to-four times more prevalent in&nbsp;women than in&nbsp;men. Magnetic Resonance Imaging (MRI) plays a&nbsp;crucial role in&nbsp;the disease diagnosis and follow-up. However, manual annotations are expensive, time-consuming, and prone to&nbsp;errors. Automatic, ML-based methods may introduce objectivity and labor efficiency in&nbsp;the tracking of&nbsp;MS lesions. However, the availability of&nbsp;training images for machine learning methods is&nbsp;limited. No&nbsp;publicly available dataset fully describes the heterogeneity of&nbsp;the pathology. Furthermore, changes in&nbsp;MRI scanner vendors, configurations, imaging software and medical personnel leads to&nbsp;significant variability in&nbsp;the imaging process. These differences, which are exacerbated when images are collected from multiple medical centers, represent a&nbsp;significant distributional shift for ML-based MS&nbsp;detection models, reducing the applicability and robustness of&nbsp;automated models in&nbsp;real-world conditions. Additionally, as&nbsp;segmentation is&nbsp;a&nbsp;structured prediction task, obtaining meaningful estimates of&nbsp;uncertainty at&nbsp;the voxel, lesion and patient levels can be&nbsp;non-trivial. The development of&nbsp;robust&nbsp;MS lesion segmentation models capable of&nbsp;yields information estimates of&nbsp;uncertainty is&nbsp;necessary to&nbsp;bring improvements in&nbsp;the quality and throughput of&nbsp;the medical care available to&nbsp;the growing number of&nbsp;MS patients. OFSEP, Johns Hopkins University, the University of&nbsp;Basel and the University of&nbsp;Ljubljana have contributed to&nbsp;the Shifts White Matter Lesion Segmentation Dataset for the purposes of&nbsp;developing reliable and robust&nbsp;MS lesion segmentation models."
+            },
+            {
+              "title": "Data Description",
+              "text": "The Shifts White Matter MS&nbsp;lesion segmentation dataset features a&nbsp;task that involves the generation of&nbsp;a&nbsp;3D&nbsp;segmentation mask of&nbsp;brain lesions in&nbsp;multi-modal MRI images. Given the 3D&nbsp;MRI scans of&nbsp;the brain, a&nbsp;model classifies each voxel into lesion and non-lesion tissue. Each sample in&nbsp;the dataset consists of&nbsp;a&nbsp;3D&nbsp;brain scan taken using T1-weighted and Fluid-Attenuated Inversion Recovery (FLAIR) contrasts that have undergone pre-processing including denoising, skull stripping, bias field correction and interpolation to&nbsp;a&nbsp;1mm isovoxel space. The ground-truth segmentation mask, also interpolated to&nbsp;the 1mm isovoxel space, is&nbsp;obtained as&nbsp;a&nbsp;consensus of&nbsp;one or&nbsp;more expert annotators. The dataset contains scans from multiple clinical centers: Rennes, Bordeaux, Lyon, Ljubljana, Best and Lausanne. Patient scans from different locations vary in&nbsp;terms of&nbsp;scanner models, local annotation guidelines, scanner strengths and resolution of&nbsp;raw scans. For standardized benсhmarking we&nbsp;have created a&nbsp;canonical partitioning of&nbsp;the data into in-domain train, development (dev) and evaluation (eval) sets as&nbsp;well as&nbsp;shifted development and evaluation sets. For locations containing multiple scans per patient care is&nbsp;taken to&nbsp;ensure the multiple scans are kept separate between Train/Dev and Eval. The locations Rennes, Bordeaux, Lyon and Best are treated as&nbsp;in-domain and the locations Ljubljana and Lausanne are treated as&nbsp;publicly available and held-out distributionally shifted development and evaluation sets, respectively. The Lausanne portion of&nbsp;the data will not be&nbsp;publicly released, but it&nbsp;will be&nbsp;possible to&nbsp;freely evaluate models on&nbsp;it&nbsp;via Grand-Challenge. See [paper](https://arxiv.org/abs/2206.15407) for further details."
+            },
+            {
+              "title": "License",
+              "text": "Part [Creative Commons CC&nbsp;BY NC&nbsp;SA&nbsp;4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), part credentialized Access via Zenodo with OFSEP data usage agreement"
+            }
+          ],
+          "citation": {
+            "title": "Citation",
+            "code": "@article{\n  malinin2022shifts,\n  title={Shifts 2.0: Extending The Dataset of Real Distributional Shifts},\n  author={Malinin, Andrey and Athanasopoulos, Andreas and Barakovic, Muhamed and Cuadra, Meritxell Bach and Gales, Mark JF and Granziera, Cristina and Graziani, Mara and Kartashev, Nikolay and Kyriakopoulos, Konstantinos and Lu, Po-Jui and others},\n  journal={arXiv preprint arXiv:2206.15407},\n  year={2022}\n}"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__inset">
+
+      <div class="footer__group footer__group_nav">
+        <strong class="footer__group-title">
+          {{ site.data.footer.navigation.title }}
+        </strong>
+        <ul class="footer__nav">
+          {% for item in site.data.footer.navigation.menu %}
+            <li class="footer__nav-item">
+              <a
+                href="{% if item.external != true %}{{ site.baseurl }}{% endif %}{{ item.url }}"
+                class="footer__link {% if item.external %}footer__link_external{% endif %}"
+                {% if item.external %}
+                target="_blank"
+                rel="noopener noreferrer"
+                {% endif %}
+              >
+                {{ item.title }}
+                {% if item.external %}
+                  <svg viewBox="0 0 16 17" class="footer__link-icon">
+                    <use xlink:href="#icon-external"></use>
+                  </svg>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer__group footer__group_contact">
+        <strong class="footer__group-title">
+          {{ site.data.footer.contact.title }}
+        </strong>
+        <a
+          href="mailto:{{ site.data.footer.contact.email }}"
+          class="footer__link"
+        >
+          {{ site.data.footer.contact.email }}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>

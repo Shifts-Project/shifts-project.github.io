@@ -1,0 +1,118 @@
+.top-addon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 0 44px;
+  padding: 0 0 0 22px;
+  color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 25px;
+    margin: -12px 0 0;
+    background: #fff;
+
+    @include breakpoint-lo($menu-viewport) {
+      display: none;
+    }
+  }
+
+  @include breakpoint-lo($large-viewport) {
+    margin: 0 0 0 24px;
+    padding: 0 0 0 10px;
+  }
+
+  @include breakpoint-lo($menu-viewport) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 520px;
+    margin: 0;
+    padding: 30px $padding-side 40px;
+    opacity: 0;
+  }
+
+  @include breakpoint-lo($medium-viewport) {
+    padding-right: $padding-side-md;
+    padding-left: $padding-side-md;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    padding-right: $padding-side-sm;
+    padding-left: $padding-side-sm;
+  }
+}
+
+.header_menu-opened .top-addon,
+.header__checkbox:checked + .header__container .top-addon {
+  @include breakpoint-lo($menu-viewport) {
+    opacity: 1;
+    transition: opacity 0.3s 0.1s;
+  }
+}
+
+.top-addon__link {
+  flex-grow: 0;
+  margin-left: 16px;
+  color: $color-text;
+  text-decoration: none;
+
+  @include breakpoint-lo($large-viewport) {
+    margin-left: 10px;
+  }
+
+  @include breakpoint-lo($menu-viewport) {
+    color: $color-text;
+    font-size: 16px;
+    line-height: 1;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    //color: $color-link-hover;
+    color: $color-gray-light;
+    text-decoration: none;
+  }
+}
+
+.top-addon__link-title {
+  position: absolute;
+  top: 0;
+  left: -1000em;
+}
+
+.top-addon__link-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin: -1px 0 0 5px;
+
+  @include breakpoint-lo($menu-viewport) {
+    width: 52px;
+    height: 52px;
+    margin: -1px 18px 0 0;
+  }
+}
+
+.top-addon__button {
+  margin: 0 0 0 40px;
+
+  @include breakpoint-lo($large-viewport) {
+    margin: 0 0 0 24px;
+  }
+
+  @include breakpoint-lo($menu-viewport) {
+    margin: 52px 0 0;
+  }
+}

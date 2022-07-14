@@ -1,0 +1,36 @@
+.dataset-hero {
+  position: relative;
+  margin: 0 0 96px;
+
+  @include breakpoint-lo($smaller-viewport) {
+    margin: 0;
+  }
+}
+
+.dataset-hero__container {
+  z-index: 1;
+}
+
+.dataset-hero__text {
+  font-size: 24px;
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 18px;
+  }
+}
+
+/* Decor */
+
+.dataset-hero__decor-bg_bg-18 {
+  display: none;
+  top: -645px;
+  left: 75%;
+  margin-left: -135px;
+
+  @include breakpoint-lo($small-viewport) {
+    display: block;
+    top: -500px;
+    width: 500px;
+    margin-left: -165px;
+  }
+}

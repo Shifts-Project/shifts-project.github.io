@@ -1,0 +1,17 @@
+{
+  "fields": {
+    "breadcrumbs": {
+      "home": {
+        "title": "Shifts",
+        "url": "/"
+      },
+      "list": [
+        {
+          "title": "News",
+          "url": "/news"
+        }
+      ],
+      "appendPost": true
+    }
+  }
+}

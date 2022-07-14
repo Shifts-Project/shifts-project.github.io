@@ -1,0 +1,49 @@
+{% assign fields = site.data.page_index.fields.news %}
+<div class="home-news">
+  <div class="home-news__container container">
+    <div class="home-news__heading-wrap">
+      <h2 class="home-news__heading heading-h2">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h2>
+      <a
+        href="{{ site.baseurl }}{{ fields.more.url }}"
+        class="home-news__more home-news__more_heading"
+      >
+        {{ fields.more.text }}
+        <svg viewBox="0 0 18 18" class="home-news__more-icon">
+          <use xlink:href="#icon-corner-right"></use>
+        </svg>
+      </a>
+    </div>
+    <ul class="home-news__list">
+      {% for post in site.posts limit:3 %}
+        <li class="home-news__item">
+          <h4 class="home-news__title heading-h4">
+            <a
+              class="home-news__link"
+              href="{{ site.baseurl }}{{ post.url }}"
+            >
+              {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
+            </a>
+          </h4>
+          <div class="home-news__excerpt">
+            {{ post.excerpt | markdownify }}
+          </div>
+          <div class="home-news__date">
+            {{ fields.published | markdownify | remove: '<p>' | remove: '</p>' }}
+            {{ post.date | date_to_long_string }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <a
+      href="{{ site.baseurl }}{{ fields.more.url }}"
+      class="home-news__more home-news__more_footer"
+    >
+      {{ fields.more.text }}
+      <svg viewBox="0 0 18 18" class="home-news__more-icon">
+        <use xlink:href="#icon-corner-right"></use>
+      </svg>
+    </a>
+  </div>
+</div>

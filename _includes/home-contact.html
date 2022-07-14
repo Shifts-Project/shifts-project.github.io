@@ -1,0 +1,35 @@
+{% assign fields = site.data.page_index.fields.contact %}
+<div class="home-contact">
+  <div class="home-contact__container container">
+    <div class="home-contact__intro">
+      {{ fields.intro | markdownify }}
+    </div>
+    <ul class="home-contact__services">
+      {% for item in fields.list %}
+        <li class="home-contact__service home-contact__service_{{item.slug}}">
+          <a
+            href="{{ item.url }}"
+            class="home-contact__link home-contact__link_{{item.slug}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{ item.title }}"
+          >
+            <svg viewBox="0 0 52 52" class="home-contact__link-icon home-contact__link-icon_{{item.slug}}">
+              <use xlink:href="#icon-{{item.slug}}"></use>
+            </svg>
+            <span class="home-contact__link-text">
+              {{ item.text }}
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="home-contact__decor-wrap decor-wrap">
+    <img
+      class="home-contact__decor-bg home-contact__decor-bg_bg-06 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-06.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

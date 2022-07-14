@@ -1,0 +1,162 @@
+{
+  "fields": {
+    "breadcrumbs": {
+      "home": {
+        "title": "Shifts",
+        "url": "/"
+      },
+      "list": [
+        {
+          "title": "Team &amp;&nbsp;Sponsors",
+          "url": "/team"
+        }
+      ]
+    },
+    "hero": {
+      "heading": "Team &amp;&nbsp;Sponsors"
+    },
+    "team": {
+      "heading": "Organizing Committee",
+      "list": [
+        {
+          "slug": "malinin",
+          "img": "team/malinin.png",
+          "name": "Andrey Malinin",
+          "organization": "Yandex Research"
+        },
+        {
+          "slug": "volf",
+          "img": "team/volf.png",
+          "name": "Elena Volf",
+          "organization": "Yandex Research"
+        },
+        {
+          "slug": "kartashev",
+          "img": "team/kartashev.png",
+          "name": "Nikolay Kartashev",
+          "organization": "Yandex Research"
+        },
+        {
+          "slug": "graziani",
+          "img": "team/graziani.png",
+          "name": "Mara Graziani",
+          "organization": "HES-SO Valais"
+        },
+        {
+          "slug": "cuadra",
+          "img": "team/cuadra.png",
+          "name": "Meritxell Bach&nbsp;Cuadra",
+          "organization": "University of&nbsp;Lausanne"
+        },
+        {
+          "slug": "molchanova",
+          "img": "team/molchanova.png",
+          "name": "Nataliia Molchanova",
+          "organization": "University of&nbsp;Lausanne / HES-SO Valais"
+        },
+        {
+          "slug": "granziera",
+          "img": "team/granziera.png",
+          "name": "Cristina Granziera",
+          "organization": "University of&nbsp;Basel"
+        },
+        {
+          "slug": "raina",
+          "img": "team/raina.png",
+          "name": "Vatsal Raina",
+          "organization": "University of&nbsp;Cambridge"
+        },
+        {
+          "slug": "gales",
+          "img": "team/gales.png",
+          "name": "Mark Gales",
+          "organization": "University of&nbsp;Cambridge"
+        },
+        {
+          "slug": "kyriakopoulos",
+          "img": "team/kyriakopoulos.png",
+          "name": "Konstantinos Kyriakopoulos",
+          "organization": "DeepSea"
+        },
+        {
+          "slug": "tsompopoulou",
+          "img": "team/tsompopoulou.png",
+          "name": "Efi Tsompopoulou",
+          "organization": "DeepSea"
+        },
+        {
+          "slug": "nikitakis",
+          "img": "team/nikitakis.png",
+          "name": "Antonis Nikitakis",
+          "organization": "DeepSea"
+        },
+        {
+          "slug": "athanasopoulos",
+          "img": "team/athanasopoulos.png",
+          "name": "Andreas Athanasopoulos",
+          "organization": "DeepSea"
+        }
+      ]
+    },
+    "providers": {
+      "heading": "Data Providers",
+      "enableDecorBg": false,
+      "list": [
+        {
+          "slug": "deepsea",
+          "svg": true,
+          "title": "DeepSea",
+          "url": "https://www.deepsea.ai"
+        },
+        {
+          "slug": "johns-hopkins",
+          "svg": true,
+          "title": "Johns Hopkins University",
+          "url": "https://www.jhu.edu/"
+        },
+        {
+          "slug": "ofsep",
+          "svg": true,
+          "title": "OFSEP",
+          "url": "https://www.ofsep.org/"
+        },
+        {
+          "slug": "yandex-research",
+          "svg": true,
+          "title": "Yandex Research",
+          "url": "https://research.yandex.com/"
+        },
+        {
+          "slug": "ljubljani",
+          "svg": true,
+          "title": "University of Ljubljana",
+          "url": "https://www.uni-lj.si/university/"
+        },
+        {
+          "slug": "basel",
+          "svg": false,
+          "title": "University of Basel",
+          "url": "https://www.unibas.ch/"
+        }
+      ]
+    },
+    "sponsors": {
+      "heading": "Sponsors",
+      "enableDecorBg": true,
+      "list": [
+        {
+          "slug": "deepsea",
+          "svg": true,
+          "title": "DeepSea",
+          "url": "https://www.deepsea.ai"
+        },
+        {
+          "slug": "yandex-research",
+          "svg": true,
+          "title": "Yandex Research",
+          "url": "https://research.yandex.com/"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+---
+title: Team & Sponsors — Shifts Challenge
+description:
+keywords:
+ogTitle:
+slug: team
+permalink: /team
+---
+{% assign fields = site.data.page_team.fields.breadcrumbs %}
+{% include breadcrumbs.html %}
+{% include team-hero.html %}
+{% include team-list.html %}
+{% assign fields = site.data.page_team.fields.providers %}
+{% include partners.html %}
+{% assign fields = site.data.page_team.fields.sponsors %}
+{% include partners.html %}

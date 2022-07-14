@@ -1,0 +1,22 @@
+.challenges-hero {
+  position: relative;
+}
+
+.challenges-hero__container {
+  z-index: 1;
+}
+
+/* Decor */
+
+.challenges-hero__decor-bg_bg-07 {
+  top: -600px;
+  left: 75%;
+  margin-left: -220px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -410px;
+    left: 50%;
+    width: 500px;
+    margin-left: -55px;
+  }
+}

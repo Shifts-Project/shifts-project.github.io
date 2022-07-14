@@ -1,0 +1,80 @@
+{% assign fields = site.data.page_index.fields.about %}
+<div class="home-about">
+  <div class="home-about__container container">
+    <h2 class="home-about__heading heading-h2">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h2>
+    <div class="home-about__content-col content-col">
+      {% for item in fields.blocks %}
+        <div class="home-about__block content-block">
+          <h3 class="home-about__title content-block__title heading-h3">
+            {{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}
+          </h3>
+          <div class="home-about__text content-block__text">
+            {{ item.text | markdownify }}
+          </div>
+          {% if item.comparison %}
+            <div class="home-about__comparison">
+              <div class="home-about__comparison-col home-about__comparison-col_l">
+                {% for item_inner in item.comparison.col1.items %}
+                  <div class="home-about__comparison-item">
+                    <img
+                      class="home-about__comparison-pic"
+                      src="{{'/assets/images/' | append: item_inner.img | relative_url}}"
+                      alt=""
+                    />
+                    <span class="home-about__comparison-text">
+                      <strong class="home-about__comparison-title">
+                        {{ item.comparison.col1.title }}
+                      </strong>
+                      <span class="home-about__comparison-subtitle">
+                        {{ item.comparison.col1.subtitle }}
+                      </span>
+                      <span class="home-about__comparison-label">
+                        {{ item_inner.text }}
+                      </span>
+                    </span>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="home-about__comparison-col home-about__comparison-col_r">
+                {% for item_inner in item.comparison.col2.items %}
+                  <div class="home-about__comparison-item">
+                    <img
+                      class="home-about__comparison-pic"
+                      src="{{'/assets/images/' | append: item_inner.img | relative_url}}"
+                      alt=""
+                    />
+                    <span class="home-about__comparison-text">
+                      <strong class="home-about__comparison-title">
+                        {{ item.comparison.col2.title }}
+                      </strong>
+                      <span class="home-about__comparison-subtitle">
+                        {{ item.comparison.col2.subtitle }}
+                      </span>
+                      <span class="home-about__comparison-label">
+                        {{ item_inner.text }}
+                      </span>
+                    </span>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="home-about__decor-wrap decor-wrap">
+    <img
+      class="home-about__decor-bg home-about__decor-bg_bg-04 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-04.svg' | relative_url}}"
+      alt=""
+    />
+    <img
+      class="home-about__decor-bg home-about__decor-bg_bg-05 decor-wrap_bg"
+      src="{{'/assets/images/decor/decor-bg-05.svg' | relative_url}}"
+      alt=""
+    />
+  </div>
+</div>

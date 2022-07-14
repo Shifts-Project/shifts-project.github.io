@@ -1,0 +1,13 @@
+---
+title: 404 Error
+permalink: /404.html
+layout: default
+---
+{% assign fields = site.data.page_error.fields %}
+<div class="error-content">
+  <div class="container">
+    <h1 class="heading-h1">{{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+    <p><strong>{{ fields.error404 | markdownify | remove: '<p>' | remove: '</p>' }}</strong></p>
+    <p>{{ fields.message | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  </div>
+</div>

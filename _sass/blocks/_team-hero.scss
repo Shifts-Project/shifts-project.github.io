@@ -1,0 +1,21 @@
+.team-hero {
+  position: relative;
+}
+
+.team-hero__container {
+  z-index: 1;
+}
+
+/* Decor */
+
+.team-hero__decor-bg_bg-22 {
+  top: -635px;
+  left: 75%;
+  margin-left: -200px;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -520px;
+    width: 500px;
+    margin-left: -175px;
+  }
+}

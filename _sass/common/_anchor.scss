@@ -1,0 +1,11 @@
+.anchor {
+    position: relative;
+
+    &_offset {
+      top: -100px;
+
+      @include breakpoint-lo($menu-viewport) {
+        top: -98px;
+      }
+    }
+}
