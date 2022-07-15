@@ -25,16 +25,16 @@
           "organization": "Yandex Research"
         },
         {
-          "slug": "volf",
-          "img": "team/volf.png",
-          "name": "Elena Volf",
-          "organization": "Yandex Research"
+          "slug": "raina",
+          "img": "team/raina.png",
+          "name": "Vatsal Raina",
+          "organization": "University of&nbsp;Cambridge"
         },
         {
-          "slug": "kartashev",
-          "img": "team/kartashev.png",
-          "name": "Nikolay Kartashev",
-          "organization": "Yandex Research"
+          "slug": "gales",
+          "img": "team/gales.png",
+          "name": "Mark Gales",
+          "organization": "University of&nbsp;Cambridge"
         },
         {
           "slug": "graziani",
@@ -61,16 +61,16 @@
           "organization": "University of&nbsp;Basel"
         },
         {
-          "slug": "raina",
-          "img": "team/raina.png",
-          "name": "Vatsal Raina",
-          "organization": "University of&nbsp;Cambridge"
+          "slug": "volf",
+          "img": "team/volf.png",
+          "name": "Elena Volf",
+          "organization": "Yandex Research"
         },
         {
-          "slug": "gales",
-          "img": "team/gales.png",
-          "name": "Mark Gales",
-          "organization": "University of&nbsp;Cambridge"
+          "slug": "kartashev",
+          "img": "team/kartashev.png",
+          "name": "Nikolay Kartashev",
+          "organization": "Yandex Research"
         },
         {
           "slug": "kyriakopoulos",
