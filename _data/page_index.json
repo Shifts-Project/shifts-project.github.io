@@ -12,7 +12,12 @@
       "cta": {
         "enable": true,
         "url": "https://shifts.grand-challenge.org",
-        "text": "Join Shifts Challenge 2022"
+        "text": "Join Shifts Challenge 2022",
+        "secondary": {
+          "enable": true,
+          "url": "https://forms.gle/DnC9mVCYgHhwCGWy5",
+          "text": "Join Our Community"
+        }
       },
       "providers": {
         "text": "Challenge Data provided by:",

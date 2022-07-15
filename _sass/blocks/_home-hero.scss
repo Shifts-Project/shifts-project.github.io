@@ -98,16 +98,17 @@
 }
 
 .home-hero__cta {
-  margin: 65px 0 50px;
+  margin: 65px 0 30px;
 
   @include breakpoint-lo($small-viewport) {
-    margin: 40px 0;
+    margin: 40px 0 20px;
   }
 }
 
 .home-hero__cta-link {
   display: inline-flex;
   align-items: center;
+  margin: 0 20px 20px 0;
   padding: 13px 15px 14px 18px;
   border: solid 1px #fff;
   border-radius: 60px;
@@ -116,6 +117,11 @@
   font-size: 18px;
   text-decoration: none;
   transition: color 0.3s, background 0.3s;
+
+  &_secondary {
+    background: transparent;
+    color: #fff;
+  }
 
   @include breakpoint-lo($small-viewport) {
     font-size: 16px;

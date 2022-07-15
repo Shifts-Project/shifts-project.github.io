@@ -41,6 +41,19 @@
               <use xlink:href="#icon-cta-external-2"></use>
             </svg>
           </a>
+          {% if fields.cta.secondary and fields.cta.secondary.enable %}
+            <a
+              href="{{ fields.cta.secondary.url }}"
+              class="home-hero__cta-link home-hero__cta-link_secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ fields.cta.secondary.text | markdownify | remove: '<p>' | remove: '</p>' }}
+              <svg viewBox="0 0 21 21" class="home-hero__cta-icon">
+                <use xlink:href="#icon-cta-external-2"></use>
+              </svg>
+            </a>
+          {% endif %}
         </div>
       {% endif %}
       {% if fields.providers.enable %}
