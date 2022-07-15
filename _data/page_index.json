@@ -11,8 +11,8 @@
       "description": "The goal of&nbsp;the project is&nbsp;to&nbsp;raise awareness of&nbsp;distributional shift, collect datasets and benchmarks, facilitate cross-disciplinary research, and organize challenges and workshops.",
       "cta": {
         "enable": true,
-        "url": "https://forms.gle/DnC9mVCYgHhwCGWy5",
-        "text": "Stay tuned for Shifts Challenge 2022"
+        "url": "https://shifts.grand-challenge.org",
+        "text": "Join Shifts Challenge 2022"
       },
       "providers": {
         "text": "Challenge Data provided by:",
