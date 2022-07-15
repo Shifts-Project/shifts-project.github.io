@@ -140,6 +140,30 @@
         }
       ]
     },
+    "academic": {
+      "heading": "Academic Partners",
+      "enableDecorBg": false,
+      "list": [
+        {
+          "slug": "chuv",
+          "svg": false,
+          "title": "Centre hospitalier universitaire vaudois",
+          "url": "https://www.chuv.ch/fr/chuv-home/"
+        },
+        {
+          "slug": "basel",
+          "svg": false,
+          "title": "University of Basel",
+          "url": "https://www.unibas.ch/"
+        },
+        {
+          "slug": "hesso",
+          "svg": true,
+          "title": "HES-SO Valais-Wallis",
+          "url": "https://www.hevs.ch/"
+        }
+      ]
+    },
     "sponsors": {
       "heading": "Sponsors",
       "enableDecorBg": true,
