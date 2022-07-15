@@ -24,9 +24,9 @@ keywords:
 thumbnail: social-share.png
 thumbnailVK: social-share-vk.png
 thumbnailTw: social-share-tw.png
-# domain: shiftsproject.io
+domain: shiftsproject.io
 # baseurl: # the subpath of your site, e.g. /blog
-url: "https://shifts-project.github.io" # the base hostname & protocol for your site, e.g. httprobots.production.txt://example.com
+url: "http://shiftsproject.io" # the base hostname & protocol for your site, e.g. httprobots.production.txt://example.com
 
 # Build settings
 # theme: minima
