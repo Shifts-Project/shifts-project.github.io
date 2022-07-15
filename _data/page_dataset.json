@@ -109,8 +109,8 @@
           "title": "Vessel Power Estimation",
           "anchor": "vessel-power-estimation",
           "img": "",
-          "video": "",
-          "videoPoster": "",
+          "video": "dataset/power.mp4",
+          "videoPoster": "dataset/power.png",
           "blocks": [
             {
               "title": "Motivation",
