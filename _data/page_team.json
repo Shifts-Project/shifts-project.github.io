@@ -145,6 +145,12 @@
       "enableDecorBg": false,
       "list": [
         {
+          "slug": "cambridge",
+          "svg": true,
+          "title": "University of Cambridge",
+          "url": "https://www.cam.ac.uk/"
+        },
+        {
           "slug": "chuv",
           "svg": false,
           "title": "Centre hospitalier universitaire vaudois",
