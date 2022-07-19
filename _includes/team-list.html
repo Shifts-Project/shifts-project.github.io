@@ -18,9 +18,11 @@
                 <strong class="team-list__name">
                   {{ item.name | markdownify | remove: '<p>' | remove: '</p>' }}
                 </strong>
-                <span class="team-list__organization">
-                  {{ item.organization | markdownify | remove: '<p>' | remove: '</p>' }}
-                </span>
+                {% if item.organization %}
+                  <span class="team-list__organization">
+                    {{ item.organization | markdownify | remove: '<p>' | remove: '</p>' }}
+                  </span>
+                {% endif %}
               </div>
             </div>
           </li>

@@ -21,80 +21,67 @@
         {
           "slug": "malinin",
           "img": "team/malinin.png",
-          "name": "Andrey Malinin",
-          "organization": "Yandex Research"
+          "name": "Andrey Malinin"
         },
         {
           "slug": "raina",
           "img": "team/raina.png",
-          "name": "Vatsal Raina",
-          "organization": "University of&nbsp;Cambridge"
+          "name": "Vatsal Raina"
         },
         {
           "slug": "gales",
           "img": "team/gales.png",
-          "name": "Mark Gales",
-          "organization": "University of&nbsp;Cambridge"
+          "name": "Mark Gales"
         },
         {
           "slug": "graziani",
           "img": "team/graziani.png",
-          "name": "Mara Graziani",
-          "organization": "HES-SO Valais"
+          "name": "Mara Graziani"
         },
         {
           "slug": "cuadra",
           "img": "team/cuadra.png",
-          "name": "Meritxell Bach&nbsp;Cuadra",
-          "organization": "University of&nbsp;Lausanne"
+          "name": "Meritxell Bach&nbsp;Cuadra"
         },
         {
           "slug": "molchanova",
           "img": "team/molchanova.png",
-          "name": "Nataliia Molchanova",
-          "organization": "University of&nbsp;Lausanne / HES-SO Valais"
+          "name": "Nataliia Molchanova"
         },
         {
           "slug": "granziera",
           "img": "team/granziera.png",
-          "name": "Cristina Granziera",
-          "organization": "University of&nbsp;Basel"
+          "name": "Cristina Granziera"
         },
         {
           "slug": "volf",
           "img": "team/volf.png",
-          "name": "Elena Volf",
-          "organization": "Yandex Research"
+          "name": "Elena Volf"
         },
         {
           "slug": "kartashev",
           "img": "team/kartashev.png",
-          "name": "Nikolay Kartashev",
-          "organization": "Yandex Research"
+          "name": "Nikolay Kartashev"
         },
         {
           "slug": "kyriakopoulos",
           "img": "team/kyriakopoulos.png",
-          "name": "Konstantinos Kyriakopoulos",
-          "organization": "DeepSea"
+          "name": "Konstantinos Kyriakopoulos"
         },
         {
           "slug": "tsompopoulou",
           "img": "team/tsompopoulou.png",
-          "name": "Efi Tsompopoulou",
-          "organization": "DeepSea"
+          "name": "Efi Tsompopoulou"
         },
         {
           "slug": "nikitakis",
           "img": "team/nikitakis.png",
-          "name": "Antonis Nikitakis",
-          "organization": "DeepSea"
+          "name": "Antonis Nikitakis"
         },
         {
           "slug": "athanasopoulos",
           "img": "team/athanasopoulos.png",
-          "name": "Andreas Athanasopoulos",
-          "organization": "DeepSea"
+          "name": "Andreas Athanasopoulos"
         }
       ]
     },
