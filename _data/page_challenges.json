@@ -28,7 +28,6 @@
           "title": "Challenge 2021",
           "label": "",
           "text": "In&nbsp;2021, the first Shifts Challenge debuted at&nbsp;NeurIPS. The challenge consisted of&nbsp;three tracks, each corresponding to&nbsp;a&nbsp;particular data modality and task: tabular weather prediction data, machine translation data and self-driving car (SDC) for the task of&nbsp;vehicle motion prediction. These data modalities and tasks are affected by&nbsp;distributional shift and pose interesting challenges with respect to&nbsp;uncertainty estimation. Fifty participants from 13&nbsp;countries took part in&nbsp;the development phase. From these 50&nbsp;participants, 17&nbsp;teams and individual participants later took part in&nbsp;the evaluation phase of&nbsp;the Shifts Challenge. At&nbsp;NeurIPS 2021, we&nbsp;ran an&nbsp;online Shifts Challenge breakout workshop and announced the winners, who later [presented their solutions](https://research.yandex.com/shifts) at&nbsp;the poster session.",
-          "more": "More details on&nbsp;[research.yandex.com](https://research.yandex.com/shifts)",
           "url": "https://research.yandex.com/shifts"
         }
       ]
