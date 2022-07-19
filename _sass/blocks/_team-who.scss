@@ -1,0 +1,55 @@
+.team-who {
+  position: relative;
+  margin: 0 0 132px;
+
+  & + & {
+    margin-top: -50px;
+
+    @include breakpoint-lo($small-viewport) {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 80px;
+  }
+}
+
+.team-who__container {
+  z-index: 1;
+}
+
+.team-who__text {
+  ul {
+    list-style: none;
+    margin: 1.5em 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding: 0 0 0 1.4em;
+      margin: 0.5em 0;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '—';
+      }
+    }
+  }
+}
+
+/* Decor */
+
+.team-who__decor-bg_bg-24 {
+  bottom: -410px;
+  left: 75%;
+  margin-left: -230px;
+
+  @include breakpoint-lo($small-viewport) {
+    bottom: -260px;
+    width: 500px;
+    margin-left: -265px;
+  }
+}

@@ -85,95 +85,9 @@
         }
       ]
     },
-    "providers": {
-      "heading": "Data Providers",
-      "enableDecorBg": false,
-      "list": [
-        {
-          "slug": "deepsea",
-          "svg": true,
-          "title": "DeepSea",
-          "url": "https://www.deepsea.ai"
-        },
-        {
-          "slug": "johns-hopkins",
-          "svg": true,
-          "title": "Johns Hopkins University",
-          "url": "https://www.jhu.edu/"
-        },
-        {
-          "slug": "ofsep",
-          "svg": true,
-          "title": "OFSEP",
-          "url": "https://www.ofsep.org/"
-        },
-        {
-          "slug": "yandex-research",
-          "svg": true,
-          "title": "Yandex Research",
-          "url": "https://research.yandex.com/"
-        },
-        {
-          "slug": "ljubljani",
-          "svg": true,
-          "title": "University of Ljubljana",
-          "url": "https://www.uni-lj.si/university/"
-        },
-        {
-          "slug": "basel",
-          "svg": false,
-          "title": "University of Basel",
-          "url": "https://www.unibas.ch/"
-        }
-      ]
-    },
-    "academic": {
-      "heading": "Academic Partners",
-      "enableDecorBg": false,
-      "list": [
-        {
-          "slug": "cambridge",
-          "svg": true,
-          "title": "University of Cambridge",
-          "url": "https://www.cam.ac.uk/"
-        },
-        {
-          "slug": "chuv",
-          "svg": false,
-          "title": "Centre hospitalier universitaire vaudois",
-          "url": "https://www.chuv.ch/fr/chuv-home/"
-        },
-        {
-          "slug": "basel",
-          "svg": false,
-          "title": "University of Basel",
-          "url": "https://www.unibas.ch/"
-        },
-        {
-          "slug": "hesso",
-          "svg": true,
-          "title": "HES-SO Valais-Wallis",
-          "url": "https://www.hevs.ch/"
-        }
-      ]
-    },
-    "sponsors": {
-      "heading": "Sponsors",
-      "enableDecorBg": true,
-      "list": [
-        {
-          "slug": "deepsea",
-          "svg": true,
-          "title": "DeepSea",
-          "url": "https://www.deepsea.ai"
-        },
-        {
-          "slug": "yandex-research",
-          "svg": true,
-          "title": "Yandex Research",
-          "url": "https://research.yandex.com/"
-        }
-      ]
+    "who": {
+      "heading": "Who we are",
+      "text": "The Shifts Project&rsquo;s mission is&nbsp;to&nbsp;encourage research collaboration into the application and evaluation of&nbsp;deep learning models under conditions of&nbsp;in-the-wild distributional shift. Our vision is&nbsp;that increased research interest in&nbsp;this area will enable the application of&nbsp;deep learning to&nbsp;a&nbsp;more diverse range of&nbsp;real-life applications, lead to&nbsp;the development of&nbsp;more robust and higher performing models, create tools for the utility, safety and suitability for downstream optimisation tasks of&nbsp;deep learning models to&nbsp;be&nbsp;more fairly evaluated, and unlock greater understanding of&nbsp;the properties and robustness of&nbsp;neural networks. To&nbsp;this end, the independent Organising Committee has been formed in&nbsp;2022 for the purposes&nbsp;of:\n\n- Building partnerships between companies, institutions and researchers to&nbsp;encourage research collaboration. \n- Making available public datasets from diverse in-the-wild applications of&nbsp;deep learning to&nbsp;the research community. \n- Establishing and raising awareness of&nbsp;benchmarks that allow the robustness of&nbsp;models to&nbsp;distributional shift to&nbsp;be&nbsp;fairly evaluated. \n- Organising challenges, workshops, talks and other events to&nbsp;encourage research into distributional shifts.\n\nThe 2021 Shifts Challenge was co-organised by&nbsp;the University of&nbsp;Cambridge, the University of&nbsp;Oxford and Yandex Research, with challenge data provided by&nbsp;Yandex Self-driving Car. Yandex is&nbsp;not a&nbsp;data provider of&nbsp;the 2022 Shifts Challenge."
     }
   }
 }

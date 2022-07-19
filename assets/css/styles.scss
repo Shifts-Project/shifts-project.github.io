@@ -44,6 +44,7 @@ $baseurl: "{{ site.baseurl }}";
 @import "blocks/news-list";
 @import "blocks/team-hero";
 @import "blocks/team-list";
+@import "blocks/team-who";
 @import "blocks/partners";
 @import "blocks/dataset-hero";
 @import "blocks/dataset-content";
