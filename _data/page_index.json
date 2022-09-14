@@ -134,7 +134,7 @@
       }
     },
     "contact": {
-      "intro": "For general questions about Shifts, write to&nbsp;[info@shiftsproject.io](mailto:info@shiftsproject.io) or&nbsp;create an&nbsp;issue in&nbsp;our [GitHub repository](https://github.com/Shifts-Project/shifts).",
+      "intro": "For general questions about Shifts, write to&nbsp;[info@shifts.ai](mailto:info@shifts.ai) or&nbsp;create an&nbsp;issue in&nbsp;our [GitHub repository](https://github.com/Shifts-Project/shifts).",
       "list": [
         {
           "slug": "social-groups",
