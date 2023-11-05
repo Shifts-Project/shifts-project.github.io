@@ -19,7 +19,7 @@
       "list": [
         {
           "title": "Challenge 2022",
-          "label": "Live",
+          "label": "",
           "text": "This challenge will be&nbsp;the second iteration of&nbsp;Shifts, which successfully debuted last year at&nbsp;NeurIPS 2021. This year, the competition will consist of&nbsp;two new tracks, each corresponding to&nbsp;a&nbsp;high-risk application affected by&nbsp;distributional shift: marine cargo vessel power estimation and White Matter Multiple Sclerosis lesion segmentation in&nbsp;3D&nbsp;Magnetic Resonance Imaging of&nbsp;the brain. Each application is&nbsp;associated with a&nbsp;unique data modality and predictive task. Both tasks are strongly affected by&nbsp;distributional shift and have strict requirements on&nbsp;robustness. Furthermore, both applications are socially relevant: the former in&nbsp;terms of&nbsp;lowering carbon emissions of&nbsp;supply chains and the latter in&nbsp;terms of&nbsp;alleviating a&nbsp;widespread, incurable and degenerative illness.",
           "more": "More details on&nbsp;[grand-challenge.org](https://shifts.grand-challenge.org)",
           "url": "https://shifts.grand-challenge.org"
